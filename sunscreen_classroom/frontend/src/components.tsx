@@ -70,7 +70,7 @@ export function useCardDrag(onDrop:(item:string,target:string)=>void,onInvalid:(
    const cancel=()=>{window.clearInterval(scroller);window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',finish);window.removeEventListener('pointercancel',cancel);setDrag(null);suppress.current=false;};
    cleanup.current=cancel;window.addEventListener('pointermove',move);window.addEventListener('pointerup',finish);window.addEventListener('pointercancel',cancel);
  }
- return {begin,suppress,ghost:drag?<div className="drag-ghost" style={{left:drag.x,top:drag.y}}><FlaskConical size={16}/>{FG_NAMES[drag.item as FGId]||({methyl:'甲基',methoxy:'甲氧基',amino:'氨基',ethyl:'乙醇',hexyl:'正己醇',ethylhexyl:'2-乙基己醇'} as Record<string,string>)[drag.item]}</div>:null};
+ return {begin,suppress,ghost:drag?<div className="drag-ghost" style={{left:drag.x,top:drag.y}}><FlaskConical size={16}/>{FG_NAMES[drag.item as FGId]||({methoxy:'甲氧基',methyl:'甲醇',ethylhexyl:'2-乙基己醇'} as Record<string,string>)[drag.item]}</div>:null};
 }
 
 export function InteractionHint(){return <span className="interaction-hint"><MousePointer2 size={14}/>拖拽卡片，或点选卡片后点击目标位置</span>;}

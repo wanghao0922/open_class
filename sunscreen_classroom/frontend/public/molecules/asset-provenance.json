@@ -598,5 +598,73 @@
     "original_sha256": "4a32afbe0ecf6449ef34e485e4f3e560982958521ec9b245a3af5d96d042548c",
     "final_sha256": "5e8c87597e4d12b5e9d0df3dea56a8801123a9cae0672d82d8f7e5226e7d9290",
     "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "none__methyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "texture_source_id": "none__acid",
+    "generation": "Existing AI texture reused; no new image API request.",
+    "original_sha256": "d4e11228816db5661a6a93271b46b2914d24ba5dc6d19691082a929277b87818",
+    "final_sha256": "2b6c45f0da003a1b02a0b52fbd182668f77f0ac2055bbdcc7a9350e1a435841f",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_ortho__methyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "texture_source_id": "methoxy_ortho__acid",
+    "generation": "Existing AI texture reused; no new image API request.",
+    "original_sha256": "2dc3ae3822e5a620d2ed7c63f4fd0594c6bf078efc1ff91e7003bf5f0372732d",
+    "final_sha256": "2017dc447b62c0c3dcba440dd6f6fdab8185904bfefab9dbefa41b4f43a0f9cb",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_meta__methyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "texture_source_id": "methoxy_meta__acid",
+    "generation": "Existing AI texture reused; no new image API request.",
+    "original_sha256": "ea4b4301a9db69136006f65f5192139d9333714aa85779146b724ccc77fbcf8d",
+    "final_sha256": "ab6278023939bca1bd0d842648528139b87aee451eba3f139ed30a8060fc080b",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_para__methyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "texture_source_id": "methoxy_para__acid",
+    "generation": "Existing AI texture reused; no new image API request.",
+    "original_sha256": "77c8b3b92d72892f764564545843f009a6cd0efaa04a2f63e18f32571f42fce2",
+    "final_sha256": "a48535b724fb56cfa5f10437597aac471e4834485ae18eebec3c026cf50dd40c",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
   }
 ]

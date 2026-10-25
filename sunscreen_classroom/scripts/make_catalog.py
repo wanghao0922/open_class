@@ -10,7 +10,7 @@ OUT = ROOT / 'frontend' / 'public' / 'molecules'
 RINGS = [('none', '', None, None)] + [
     (key, label, pos, tag) for key, label, tag in [('methyl','甲基','C'),('methoxy','甲氧基','OC'),('amino','氨基','N')]
     for pos in ['ortho','meta','para']]
-ESTERS = [('acid','',''),('ethyl','乙','CC'),('hexyl','正己','CCCCCC'),('ethylhexyl','2-乙基己','CC(CC)CCCC')]
+ESTERS = [('acid','',''),('ethyl','乙','CC'),('hexyl','正己','CCCCCC'),('ethylhexyl','2-乙基己','CC(CC)CCCC'),('methyl','甲','C')]
 POS_LABEL = {'ortho':'邻','meta':'间','para':'对'}
 
 def main():
@@ -22,6 +22,8 @@ def main():
     rdDepictor.Compute2DCoords(template)
     for key,label,pos,tag in RINGS:
         for ester,elabel,chain in ESTERS:
+            if ester=='methyl' and key not in ['none','methoxy']:
+                continue
             ring = 'c1ccccc1'
             if pos=='ortho': ring='c1c(X)cccc1'
             if pos=='meta': ring='c1cc(X)ccc1'
@@ -37,7 +39,8 @@ def main():
             drawer=rdMolDraw2D.MolDraw2DSVG(900,340)
             opts=drawer.drawOptions(); opts.clearBackground=False; opts.bondLineWidth=2.4; opts.minFontSize=15
             drawer.DrawMolecule(mol); drawer.FinishDrawing()
-            (OUT/f'{ident}.svg').write_text(drawer.GetDrawingText(),encoding='utf-8')
+            if ident not in previous:
+                (OUT/f'{ident}.svg').write_text(drawer.GetDrawingText(),encoding='utf-8')
             old=previous.get(ident,{})
             catalog.append({'id':ident,'name':name,'ring':key,'position':pos,'ester':ester,
                 'smiles':Chem.MolToSmiles(mol,isomericSmiles=True),'formula':rdMolDescriptors.CalcMolFormula(mol),

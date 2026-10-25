@@ -111,9 +111,11 @@ def test_phase_switch_and_molecule_validation(teacher_client):
     assert client.put('/api/student/molecule',json={'molecule_id':'methoxy_para__ethylhexyl','revision':0}).status_code==200
     state=control(teacher_client,room,3,'close')
     assert state['task3']=='closed'
-    assert client.put('/api/student/molecule',json={'molecule_id':'methoxy_para__ethyl','revision':1}).status_code==409
+    assert client.put('/api/student/molecule',json={'molecule_id':'methoxy_para__methyl','revision':1}).status_code==409
     control(teacher_client,room,3)
-    assert client.put('/api/student/molecule',json={'molecule_id':'methoxy_para__ethyl','revision':1}).status_code==200
+    for retired in ['methoxy_para__ethyl','methoxy_para__hexyl','methyl_para__acid','amino_para__acid']:
+        assert client.put('/api/student/molecule',json={'molecule_id':retired,'revision':1}).status_code==422
+    assert client.put('/api/student/molecule',json={'molecule_id':'methoxy_para__methyl','revision':1}).status_code==200
     saved=client.get('/api/me').json()
     assert saved['submissions']['3']['revision']==2
     client.close()
@@ -135,7 +137,11 @@ def test_catalog_connectivity_and_trans_configuration():
     from rdkit import Chem
     from rdkit.Chem import rdMolDescriptors
     entries=catalog()
-    assert len(entries)==40 and len({m['smiles'] for m in entries})==40
+    assert len(entries)==44 and len({m['smiles'] for m in entries})==44
+    available=[item for item in entries if item['available']]
+    assert len(available)==12
+    assert {item['ring'] for item in available}=={'none','methoxy'}
+    assert {item['ester'] for item in available}=={'acid','methyl','ethylhexyl'}
     root=Path(__file__).resolve().parents[1]/'frontend/public'
     for item in entries:
         mol=Chem.MolFromSmiles(item['smiles'])
@@ -146,8 +152,14 @@ def test_catalog_connectivity_and_trans_configuration():
         assert set(item['hotspots'])=={'ortho','meta','para','ester'}
     target=next(x for x in entries if x['id']=='methoxy_para__ethylhexyl')
     assert target['formula']=='C18H26O3'
+    methyl_esters=[item for item in available if item['ester']=='methyl']
+    assert len(methyl_esters)==4
+    for item in methyl_esters:
+        mol=Chem.MolFromSmiles(item['smiles'])
+        assert mol.HasSubstructMatch(Chem.MolFromSmarts('[C](=O)[O][CH3]'))
+        assert item['formula']==('C10H10O2' if item['ring']=='none' else 'C11H12O3')
     provenance=__import__('json').loads((root/'molecules/asset-provenance.json').read_text(encoding='utf-8'))
-    assert len(provenance)==40
+    assert len(provenance)==44
     from PIL import Image
     import hashlib
     for item in provenance:

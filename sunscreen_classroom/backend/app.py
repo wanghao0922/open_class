@@ -22,6 +22,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from sqlalchemy import DateTime, ForeignKey, Integer, String, Text, UniqueConstraint, create_engine, event, select
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column, sessionmaker
+from backend.catalog import load_catalog
 
 ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT / '.env')
@@ -129,7 +130,7 @@ CATALOG_FILE = ROOT / 'frontend/public/molecules/catalog.json'
 
 
 def catalog():
-    return json.loads(CATALOG_FILE.read_text(encoding='utf-8')) if CATALOG_FILE.exists() else []
+    return load_catalog(CATALOG_FILE)
 
 
 @asynccontextmanager
@@ -450,7 +451,7 @@ class MoleculeAnswer(BaseModel):
 
 @app.put('/api/student/molecule')
 def submit_molecule(data: MoleculeAnswer, user=Depends(student), db: Session = Depends(db_session)):
-    if data.molecule_id not in {x['id'] for x in catalog()}:
+    if data.molecule_id not in {x['id'] for x in catalog() if x['available']}:
         raise HTTPException(422, '请选择有效的分子结构')
     if data.molecule_id == 'none__acid':
         raise HTTPException(422, '请至少完成一项修饰后再提交')
@@ -547,7 +548,7 @@ def export(cid: int, format: Literal['json', 'csv'] = 'json', db: Session = Depe
 def demo(db: Session = Depends(db_session)):
     room = new_class(db, '演示课堂 · 探秘防晒霜的主要成分', 10, True)
     room.phase = 2; room.task2 = 'open'
-    ids = ['methoxy_para__ethylhexyl', 'methoxy_ortho__ethyl', 'amino_para__acid', 'methyl_meta__hexyl']
+    ids = ['methoxy_para__ethylhexyl', 'methoxy_ortho__methyl', 'methoxy_meta__acid', 'none__methyl']
     for number in range(1, 11):
         group = Group(classroom_id=room.id, number=number, reporter=f'演示同学{number}'); db.add(group); db.flush()
         row1 = [{'id': 'alkene', 'count': 1}, {'id': 'carboxyl', 'count': 1}] if number <= 8 else [{'id': 'alkyne', 'count': 1}, {'id': 'hydroxyl', 'count': 2}]

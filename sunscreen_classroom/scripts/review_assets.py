@@ -9,7 +9,7 @@ OUT=ROOT/'frontend/public/molecules';WORK=ROOT/'work';WORK.mkdir(exist_ok=True)
 catalog=json.loads((OUT/'catalog.json').read_text(encoding='utf-8'))
 font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',16)
 report=[]
-for start in [0,20]:
+for start in range(0,len(catalog),20):
     sheet=Image.new('RGB',(2000,1216),'#f1f4f8');draw=ImageDraw.Draw(sheet)
     for n,item in enumerate(catalog[start:start+20]):
         p=OUT/f'{item["id"]}.png'

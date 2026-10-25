@@ -1,7 +1,7 @@
 export type FGId = 'carboxyl' | 'aldehyde' | 'ester' | 'hydroxyl' | 'alkene' | 'alkyne';
 export type FGCount = {id: FGId; count: number};
 export type Row = FGCount[];
-export type Molecule = {id:string; name:string; ring:string; position:string|null; ester:string; formula:string; smiles:string; structure:string; cloud:string; hotspots:Record<string,number[]>; image_status:string; image_kind:string};
+export type Molecule = {id:string; name:string; ring:string; position:string|null; ester:string; formula:string; smiles:string; structure:string; cloud:string; hotspots:Record<string,number[]>; image_status:string; image_kind:string; available:boolean};
 export type Classroom = {id:number;code:string;name:string;total_groups:number;phase:number;task2:string;task3:string;demo:boolean;joined:number;submitted2:number;submitted3:number;created:string};
 export type Answer = {payload:{rows?:Row[];molecule_id?:string};revision:number;updated:string};
 export type Group = {id:number|null;number:number;reporter:string;answers:Record<string,Answer>};

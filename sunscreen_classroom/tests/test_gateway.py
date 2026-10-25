@@ -24,7 +24,12 @@ def response_for(message, body, headers=None):
 def test_offline_static_catalog_and_connection_auth():
     with TestClient(gateway.app) as client:
         assert client.get('/healthz').json()['computer_connected'] is False
-        assert len(client.get('/api/catalog').json()) == 40
+        materials = client.get('/api/catalog').json()
+        assert len(materials) == 44
+        available = [item for item in materials if item['available']]
+        assert len(available) == 12
+        assert {item['ester'] for item in available} == {'acid', 'methyl', 'ethylhexyl'}
+        assert {item['ring'] for item in available} == {'none', 'methoxy'}
         assert client.get('/api/me').status_code == 503
         with pytest.raises(WebSocketDisconnect):
             with client.websocket_connect('/relay/connect', headers={'Authorization': 'Bearer wrong'}):

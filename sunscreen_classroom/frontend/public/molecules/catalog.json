@@ -124,6 +124,37 @@
     "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
   },
   {
+    "id": "none__methyl",
+    "name": "肉桂酸-甲酯",
+    "ring": "none",
+    "position": null,
+    "ester": "methyl",
+    "smiles": "COC(=O)/C=C/c1ccccc1",
+    "formula": "C10H10O2",
+    "structure": "/molecules/none__methyl.svg",
+    "cloud": "/molecules/none__methyl.png",
+    "hotspots": {
+      "ortho": [
+        30.33,
+        36.151
+      ],
+      "meta": [
+        21.762,
+        36.151
+      ],
+      "para": [
+        17.478,
+        47.282
+      ],
+      "ester": [
+        65.46,
+        47.282
+      ]
+    },
+    "image_status": "ready",
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+  },
+  {
     "id": "methyl_ortho__acid",
     "name": "邻甲基肉桂酸",
     "ring": "methyl",
@@ -620,6 +651,37 @@
     "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
   },
   {
+    "id": "methoxy_ortho__methyl",
+    "name": "邻甲氧基肉桂酸-甲酯",
+    "ring": "methoxy",
+    "position": "ortho",
+    "ester": "methyl",
+    "smiles": "COC(=O)/C=C/c1ccccc1OC",
+    "formula": "C11H12O3",
+    "structure": "/molecules/methoxy_ortho__methyl.svg",
+    "cloud": "/molecules/methoxy_ortho__methyl.png",
+    "hotspots": {
+      "ortho": [
+        30.33,
+        44.548
+      ],
+      "meta": [
+        21.762,
+        44.548
+      ],
+      "para": [
+        17.478,
+        55.678
+      ],
+      "ester": [
+        65.46,
+        55.678
+      ]
+    },
+    "image_status": "ready",
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+  },
+  {
     "id": "methoxy_meta__acid",
     "name": "间甲氧基肉桂酸",
     "ring": "methoxy",
@@ -744,6 +806,37 @@
     "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
   },
   {
+    "id": "methoxy_meta__methyl",
+    "name": "间甲氧基肉桂酸-甲酯",
+    "ring": "methoxy",
+    "position": "meta",
+    "ester": "methyl",
+    "smiles": "COC(=O)/C=C/c1cccc(OC)c1",
+    "formula": "C11H12O3",
+    "structure": "/molecules/methoxy_meta__methyl.svg",
+    "cloud": "/molecules/methoxy_meta__methyl.png",
+    "hotspots": {
+      "ortho": [
+        31.368,
+        49.851
+      ],
+      "meta": [
+        23.252,
+        49.851
+      ],
+      "para": [
+        19.194,
+        60.393
+      ],
+      "ester": [
+        64.644,
+        60.393
+      ]
+    },
+    "image_status": "ready",
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+  },
+  {
     "id": "methoxy_para__acid",
     "name": "对甲氧基肉桂酸",
     "ring": "methoxy",
@@ -862,6 +955,37 @@
       "ester": [
         50.669,
         43.11
+      ]
+    },
+    "image_status": "ready",
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+  },
+  {
+    "id": "methoxy_para__methyl",
+    "name": "对甲氧基肉桂酸-甲酯",
+    "ring": "methoxy",
+    "position": "para",
+    "ester": "methyl",
+    "smiles": "COC(=O)/C=C/c1ccc(OC)cc1",
+    "formula": "C11H12O3",
+    "structure": "/molecules/methoxy_para__methyl.svg",
+    "cloud": "/molecules/methoxy_para__methyl.png",
+    "hotspots": {
+      "ortho": [
+        39.772,
+        38.222
+      ],
+      "meta": [
+        32.485,
+        38.222
+      ],
+      "para": [
+        28.841,
+        47.688
+      ],
+      "ester": [
+        69.65,
+        47.688
       ]
     },
     "image_status": "ready",

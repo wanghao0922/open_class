@@ -41,7 +41,7 @@ def graph(item):
             _,ox,oy=atoms[sub]
             methyl=atom('C',ox+nx*.7-ny*.85,oy+ny*.7+nx*.85);bond(sub,methyl)
     if item['ester']!='acid':
-        count=2 if item['ester']=='ethyl' else 6
+        count={'methyl':1,'ethyl':2,'hexyl':6,'ethylhexyl':6}[item['ester']]
         chain=[]
         for i in range(count):
             cx=6.65+i*1.02;cy=.72+(0 if i%2 else .55)+i*.22
@@ -73,7 +73,13 @@ def graph(item):
 
 def render(item):
     dest=OUT/f'{item["id"]}.png';original=ORIGINALS/dest.name
-    if not original.exists():original.write_bytes(dest.read_bytes())
+    texture_source=None
+    if not original.exists():
+        if item['ester']=='methyl':
+            texture_source=item['id'].replace('__methyl','__acid')
+            original=ORIGINALS/f'{texture_source}.png'
+        else:
+            original.write_bytes(dest.read_bytes())
     source=Image.open(original).convert('RGBA')
     white=Image.new('RGBA',source.size,'white');white.alpha_composite(source)
     # Blur removes AI-drawn bonds/atoms entirely; retain generated colors as a cloud texture.
@@ -122,11 +128,25 @@ def render(item):
     item['image_status']='ready'
     item['image_kind']='AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算'
     return {'id':item['id'],'model_requested':'gpt-image-2','source_size':list(source.size),'final_size':[W,H],
+            **({'texture_source_id':texture_source,'generation':'Existing AI texture reused; no new image API request.'} if texture_source else {}),
             'original_sha256':hashlib.sha256(original.read_bytes()).hexdigest(),
             'final_sha256':hashlib.sha256(dest.read_bytes()).hexdigest(),
             'postprocessing':'AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only.'}
 
-report=[render(item) for item in CATALOG]
-(OUT/'catalog.json').write_text(json.dumps(CATALOG,ensure_ascii=False,indent=2),encoding='utf-8')
-(OUT/'asset-provenance.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
-print(f'Corrected {len(report)} raster models against catalog connectivity; dimensions {W}x{H}; hotspots calibrated from atom coordinates.')
+def main():
+    import argparse
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--only-methyl-esters',action='store_true')
+    args=parser.parse_args()
+    entries=[item for item in CATALOG if not args.only_methyl_esters or item['ester']=='methyl']
+    existing=json.loads((OUT/'asset-provenance.json').read_text(encoding='utf-8')) if args.only_methyl_esters else []
+    report={item['id']:item for item in existing}
+    for item in entries:
+        report[item['id']]=render(item)
+    (OUT/'catalog.json').write_text(json.dumps(CATALOG,ensure_ascii=False,indent=2),encoding='utf-8')
+    (OUT/'asset-provenance.json').write_text(json.dumps(list(report.values()),ensure_ascii=False,indent=2),encoding='utf-8')
+    print(f'Corrected {len(entries)} raster models against catalog connectivity; dimensions {W}x{H}; hotspots calibrated from atom coordinates.')
+
+
+if __name__=='__main__':
+    main()

@@ -12,6 +12,7 @@ from pathlib import Path
 from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.responses import FileResponse, JSONResponse, Response
 from fastapi.staticfiles import StaticFiles
+from backend.catalog import load_catalog
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / 'frontend/public'
@@ -79,7 +80,7 @@ async def connect(websocket: WebSocket):
 
 @app.get('/api/catalog')
 def catalog():
-    return json.loads((PUBLIC / 'molecules/catalog.json').read_text(encoding='utf-8'))
+    return load_catalog(PUBLIC / 'molecules/catalog.json')
 
 
 @app.api_route('/api/{path:path}', methods=['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
