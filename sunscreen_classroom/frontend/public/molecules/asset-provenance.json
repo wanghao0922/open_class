@@ -1,0 +1,602 @@
+[
+  {
+    "id": "none__acid",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "d4e11228816db5661a6a93271b46b2914d24ba5dc6d19691082a929277b87818",
+    "final_sha256": "7e9b1c02dd7b1ed638244eaf11595436dcb685519f77a8608ffffa40c49af4b9",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "none__ethyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "9ba2eab36d98cdc51e6f741b19a3aa4ca90babde200aeaf255254ffb9574da66",
+    "final_sha256": "929b9187a0ba46a3652538235c8f093a89c1a018b5dd1d2940933635d29abea3",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "none__hexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "264e1bc45f6ac676a5f0ece2a81d068849f4c712899a6bc7cf33cb83628a9d8c",
+    "final_sha256": "b5adcf2e35921565cf9546263c962df27a010f48129acf77cb6a37a369d521dd",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "none__ethylhexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "993e9b31a9940aec8dc96409eebc37ea5139042888614555d2ae2fa5fe90bfa5",
+    "final_sha256": "8ed29c705eddeeda0151ba1c1509a0cd81514588f1e12ed13866410450961b2d",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methyl_ortho__acid",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "31b7e46277939157bd423e9ac07a0e1058ebdb18602a50410c040fb5a6e6aa44",
+    "final_sha256": "be6605867cb9d5d7a91734fa26484bf526a8727fd165f05ad9b05a6a307ad108",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methyl_ortho__ethyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "d31a9413e8b3d7d16a3b114c2a6a9a3faaa0f345939aeb092ce3e5ac78136009",
+    "final_sha256": "ad8b8b5318bba4a5fdcf87af24d23ee54771c2382da9a43edaf0473e12096e79",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methyl_ortho__hexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "11614600e91ae350d0bbffc26c89fc7f4c3b835a635d2e98e5fd37d977d3f22b",
+    "final_sha256": "64c10f2559fe4e370ae188d1a34c43c048a8885af84693a67f76ad1e179bcd63",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methyl_ortho__ethylhexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "48fd59693cb6d0748a0892881309dc35ed2e747fd12677874447a0fe446dde67",
+    "final_sha256": "870aafb93936bb85c50bba0e69c0fbeb20a0e80dfb03f4173c1fa36833e5a1bf",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methyl_meta__acid",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "0c354ec41771868148924d06d6c18ca2481bcf28bc3086f0e7f24785f42eb038",
+    "final_sha256": "8aef311078824be93eda8c3f13452bf7981ddda53c53865f58276111c969c8a0",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methyl_meta__ethyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "7ca8b06a4350bab249ebd141f7c887317a6a36a6492ab15fd7c95e01525a8366",
+    "final_sha256": "76ff9e99e38cccdcd08a4bbe5bf5cd1fbd3787ceede837251e772c3fb01eee20",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methyl_meta__hexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "45892592b3829d6b430cf730096dfa35e5e745e418e5e63eb97f77883edaf4f3",
+    "final_sha256": "c0ab5d1406d3b8ee095d74d9341f04aeaeab2c31f4773d957f9a69b48db79fa0",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methyl_meta__ethylhexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "cd6bef4f970d0f525123f9a9c1d3952622963fef6af3a4468b44cdcd723d5eff",
+    "final_sha256": "f6e521bc0e65c0c39763824c862a2cd17a99fa4c189e13ceba16008bc7cb54f5",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methyl_para__acid",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "e03ea53a340be6dfe0e5809a544fcd3214d4cbe86b28699e61d9219e6182e026",
+    "final_sha256": "ff64403bb08c75eeafcbff38588264f3a03c1248f874b83a3fe33681e9f2a457",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methyl_para__ethyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "776f561f3697168adfbefe8c75fd4a36612192c60d8b2086a048e3d453ad7520",
+    "final_sha256": "6c3f25c73b4d6c07d665aba82d03cb0dfef608e173749344493c9fbcc0738786",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methyl_para__hexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "1638cb3a22275c261ec40c8f3d0b6349e61ea76ffc8c4dca538d9be33a8e1d6f",
+    "final_sha256": "d334f2a6c5c55a655a1fe5bf37c28a50fbb174e84c2b6f3c05a4a772d04cdc97",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methyl_para__ethylhexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "c7b074b44d44643d21c3d14d46be1b621ab91b0536d9b62a895dcd5eb3e9d79a",
+    "final_sha256": "a3dcb34e90e642ce3068e0bb7cc4af4e60db71961beac9b948e34b19a9c3aacd",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_ortho__acid",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "2dc3ae3822e5a620d2ed7c63f4fd0594c6bf078efc1ff91e7003bf5f0372732d",
+    "final_sha256": "f7800134e1e679b355fcc88f994e33f9ef08b173f472bbaeb11dcab2315d4b98",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_ortho__ethyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "4c2cc8aa90554d64a31ea476f8b00adc328f1347059b7573305c623fc1320988",
+    "final_sha256": "0260a8e6a15cce6d95c895fad495418cb2b94ad54b9e20e8e0c35df9b53e8319",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_ortho__hexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "a1acc53d80bda87a5d8674dedaf1cb2081687fc924c0c191aff073f93be840f0",
+    "final_sha256": "6ac35badb647d844f062b18954a3e296c28f31e2ccb224af2bd701729ce46e10",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_ortho__ethylhexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "f997ab999d1044c3be05f8589570eab9a2be4378d4ea209591836315a044f88c",
+    "final_sha256": "1ea9f9681e78c6add9b30cb9b06ccfa088c547e6e056eed87ce7be82e033496c",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_meta__acid",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "ea4b4301a9db69136006f65f5192139d9333714aa85779146b724ccc77fbcf8d",
+    "final_sha256": "0b12863a2c23bad3e81452ae74e573de70cc41087499fccad4c620c398dfbd8e",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_meta__ethyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "001fda65ce214e647f9d0d4cb23187d986723afa08175b25de77313c66a3a1fd",
+    "final_sha256": "801cb8215573604b5af876494032c4d1a2379b3e279b156b00201b3579425446",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_meta__hexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "b30dcdc6e7e1d42a9d07ee6daecb597d27638e751250fe062001b813f790d6f3",
+    "final_sha256": "ed8f61cee04da860ba889a5150329db246887bb72d98ff1de50a4e8cf6c445de",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_meta__ethylhexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "63901608199e47fa45dfa3259bdf035543d452fcfbb823d429ac76d0b40eb524",
+    "final_sha256": "c387880e9aed0f703c1aa1f34007f3172e4ed0b0ebdbcecef106859292b7fb56",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_para__acid",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "77c8b3b92d72892f764564545843f009a6cd0efaa04a2f63e18f32571f42fce2",
+    "final_sha256": "1250e4ba048e21eafd166ccf11f8edefb01deb80c0ac97aa3ce26d8d843e0b70",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_para__ethyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "d955284abce5fc04136e5a9e5180f4f36ac02858141a2946576b23eabbe5ba71",
+    "final_sha256": "57a028d3a717061cffc5c5a10b2e1ff12e9728dc6892f16d31d27d5eaf256d56",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_para__hexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "13ee82e1e678026cea41d1bc011d4980dac58185042104173470c77d71246ba0",
+    "final_sha256": "fa372124362fd0d2c01e0eaadd2d77a3a5872acfd9c1f7acd31e6da2b4473f33",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "methoxy_para__ethylhexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "9f4884d4c4970277da33abad5e032572a0e0be523da73c5c507479b790d07970",
+    "final_sha256": "c717e83ecd588ad8d932b3aa237dd53104f19bc82445ce677eb856dde9860a99",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "amino_ortho__acid",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "6ea82cebad009a804e36039a595d05a0a1f258ecd276b5299fda7fad829a0c8c",
+    "final_sha256": "45055c5b89d0c1e4043ea67dbc2202bc0148282ae6b07f09a4fca1ccbc0247ec",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "amino_ortho__ethyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "f8d15637c96cf5a0ec70b9b0b0e140ee3304def5790bd23997fe3485bc8db6c4",
+    "final_sha256": "374ec4d59b7bd6236b5d0ffdfeb9310cb223de69fde5c776a7d489275b37f6a5",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "amino_ortho__hexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "6f076e5e048950b76017f03e0dc0c2cb9b47697c10557b9f854d0207a4aea8d9",
+    "final_sha256": "258e0d26ad1ee2d3392fe96b7b8f033aff214c9fd3364b3368f7adaaa97ed373",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "amino_ortho__ethylhexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "30e970b878f1699b3177760de288beadcf119ed18f6da139a1a454678f1c48c0",
+    "final_sha256": "adf4c01f85ad98413da0e8564aa855b4f3310fdebac3f89a05911be7179f5f81",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "amino_meta__acid",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "3d31a7a6bd84041d6d946f43ae09ba8f6def7d77b535219e29a2ac01dbbfe84b",
+    "final_sha256": "688a2093b528fdcd6394533389fe23135c09b0948018dae7c7e0090bf21d9db3",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "amino_meta__ethyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "286c22a3e930e65670dc0e586da3da695a093d1fcffe9141258b3bf560c0cd6b",
+    "final_sha256": "38beea1966e7d45cee0124f62fab294ed8a3c146b1f1ce0d85e1e5613e491296",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "amino_meta__hexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "eafb37ac254e3beb8b09cfe453c77265cfdd51e911d8da6e672cd4c298035572",
+    "final_sha256": "d352a26f7786106f46466279721ebd25838bb9fff8116505a73fedd60a05f8ae",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "amino_meta__ethylhexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "1d9f4a30925ebfb86c42d175c1b4475c3a6424464d1429880bb214231a03db4d",
+    "final_sha256": "88c061daf69b4156f78c34ef5fafc3024f281b5e7091e3b4938d01fda04489bb",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "amino_para__acid",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "6648a435aec102b5860d36018cdfaea223ec3fd0343898179f11e7896e34b4ff",
+    "final_sha256": "340a581ab9cbd42c0a1818115684d1baef7d971b0d0ddedad2c7a6f7368fa2eb",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "amino_para__ethyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "164171ef6e307919a583f79b1ca3395b5b0a56728390a73712ae674df528bfff",
+    "final_sha256": "22ac3f5d35b0021c8acc9bb3c281e8e63021b1283d214b318bd0d0ef7de7960a",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "amino_para__hexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "0f2409b8d24b8429f652f9fbba2ee9f2e7c72918a6bbc125fb1a0e6568844468",
+    "final_sha256": "560ceccf46a11b78d802ff0a3781dd2694486c7c328294e4a236fc085710cc2f",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  },
+  {
+    "id": "amino_para__ethylhexyl",
+    "model_requested": "gpt-image-2",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "final_size": [
+      1536,
+      1024
+    ],
+    "original_sha256": "4a32afbe0ecf6449ef34e485e4f3e560982958521ec9b245a3af5d96d042548c",
+    "final_sha256": "5e8c87597e4d12b5e9d0df3dea56a8801123a9cae0672d82d8f7e5226e7d9290",
+    "postprocessing": "AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only."
+  }
+]
