@@ -73,6 +73,12 @@ class Group(Base):
     created: Mapped[str] = mapped_column(String(40), default=lambda: now())
 
 
+class ClassroomDeletion(Base):
+    __tablename__ = 'classroom_deletions'
+    classroom_id: Mapped[int] = mapped_column(ForeignKey('classrooms.id'), primary_key=True)
+    deleted_at: Mapped[str] = mapped_column(String(40), default=lambda: now())
+
+
 class Submission(Base):
     __tablename__ = 'submissions'
     __table_args__ = (UniqueConstraint('group_id', 'task'),)
@@ -198,6 +204,8 @@ def classroom_or_404(db, cid):
     obj = db.get(Classroom, cid)
     if not obj:
         raise HTTPException(404, '课堂不存在')
+    if db.get(ClassroomDeletion, cid):
+        raise HTTPException(404, '课堂已删除，请在“已删除课堂”中恢复后使用')
     return obj
 
 
@@ -205,6 +213,8 @@ def group_of(db, user):
     group = db.get(Group, user.group_id)
     if not group:
         raise HTTPException(401, '小组身份已失效，请重新加入')
+    if db.get(ClassroomDeletion, group.classroom_id):
+        raise HTTPException(401, '老师已删除此课堂，请向老师确认新的课堂码')
     return group
 
 
@@ -250,6 +260,7 @@ def join(data: Join, response: Response, db: Session = Depends(db_session)):
     room = db.scalar(select(Classroom).where(Classroom.code == data.code.strip().upper()))
     if not room:
         raise HTTPException(404, '课堂码不正确，请向老师确认')
+    classroom_or_404(db, room.id)
     if data.number > room.total_groups:
         raise HTTPException(422, f'小组号应在1至{room.total_groups}之间')
     reporter = data.reporter.strip()
@@ -310,7 +321,44 @@ def new_class(db, name, total, demo=False):
 
 @app.get('/api/teacher/classes', dependencies=[Depends(teacher)])
 def list_classes(db: Session = Depends(db_session)):
-    return [class_json(db, x) for x in db.scalars(select(Classroom).order_by(Classroom.id.desc())).all()]
+    active = select(Classroom).where(~Classroom.id.in_(select(ClassroomDeletion.classroom_id)))
+    return [class_json(db, x) for x in db.scalars(active.order_by(Classroom.id.desc())).all()]
+
+
+@app.get('/api/teacher/trash', dependencies=[Depends(teacher)])
+def deleted_classes(db: Session = Depends(db_session)):
+    rows = db.execute(select(Classroom, ClassroomDeletion).join(
+        ClassroomDeletion, ClassroomDeletion.classroom_id == Classroom.id
+    ).order_by(ClassroomDeletion.deleted_at.desc())).all()
+    return [{**class_json(db, room), 'deleted_at': record.deleted_at} for room, record in rows]
+
+
+@app.delete('/api/teacher/classes/{cid}', dependencies=[Depends(teacher)])
+def delete_class(cid: int, db: Session = Depends(db_session)):
+    with write_lock:
+        room = db.scalar(select(Classroom).where(Classroom.id == cid).with_for_update())
+        if not room:
+            raise HTTPException(404, '课堂不存在')
+        if not db.get(ClassroomDeletion, cid):
+            db.add(ClassroomDeletion(classroom_id=cid))
+        for task in [2, 3]:
+            if getattr(room, f'task{task}') == 'open':
+                setattr(room, f'task{task}', 'closed')
+        db.commit()
+    return {'ok': True}
+
+
+@app.post('/api/teacher/classes/{cid}/restore', dependencies=[Depends(teacher)])
+def restore_class(cid: int, db: Session = Depends(db_session)):
+    with write_lock:
+        room = db.scalar(select(Classroom).where(Classroom.id == cid).with_for_update())
+        if not room:
+            raise HTTPException(404, '课堂不存在')
+        record = db.get(ClassroomDeletion, cid)
+        if record:
+            db.delete(record)
+        db.commit()
+    return class_json(db, room)
 
 
 @app.post('/api/teacher/classes', dependencies=[Depends(teacher)])
@@ -337,6 +385,7 @@ def apply_control(cid, data, db):
     room = db.scalar(select(Classroom).where(Classroom.id == cid).with_for_update())
     if not room:
         raise HTTPException(404, '课堂不存在')
+    classroom_or_404(db, cid)
     if data.action == 'open' and data.phase not in [2, 3]:
         raise HTTPException(422, '仅环节二和环节三支持答题')
     if data.action == 'close':
@@ -376,6 +425,7 @@ class Rename(BaseModel):
 
 @app.patch('/api/teacher/classes/{cid}/groups/{gid}', dependencies=[Depends(teacher)])
 def rename(cid: int, gid: int, data: Rename, db: Session = Depends(db_session)):
+    classroom_or_404(db, cid)
     group = db.get(Group, gid)
     if not group or group.classroom_id != cid:
         raise HTTPException(404, '小组不存在')
@@ -423,6 +473,7 @@ def save_submission(db, user, task, payload, revision):
     group = group_of(db, user)
     with write_lock:
         room = db.scalar(select(Classroom).where(Classroom.id == group.classroom_id).with_for_update())
+        classroom_or_404(db, group.classroom_id)
         if getattr(room, f'task{task}') != 'open':
             raise HTTPException(409, '本任务暂未开放或已结束，当前答案已保留在本机')
         current = db.scalar(select(Submission).where(Submission.group_id == group.id, Submission.task == task))
