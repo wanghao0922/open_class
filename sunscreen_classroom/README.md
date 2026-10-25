@@ -56,6 +56,8 @@ Windows PowerShell，在本目录运行：
 
 仓库根目录新增Blueprint时选择 `sunscreen_classroom/render.yaml`；若手动创建Web Service，Root Directory设为 `sunscreen_classroom`。
 
+Blueprint 会创建独立的免费 Web Service 和 PostgreSQL 数据库，自动将数据库连接地址注入 `DATABASE_URL`，部署时填写教师密码即可。免费数据库会在创建后30天到期；到期前导出课堂记录或迁移到长期数据库。免费服务空闲后会休眠，课前提前访问唤醒。
+
 - Build Command：`pip install -r requirements.txt && cd frontend && npm ci && npm run build`
 - Start Command：`uvicorn backend.app:app --host 0.0.0.0 --port $PORT --workers 1`
 - Health Check：`/api/health`
