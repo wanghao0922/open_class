@@ -21,4 +21,5 @@ export const FG_NAMES:Record<FGId,string>={carboxyl:'羧基',aldehyde:'醛基',e
 export const FG_IDS=Object.keys(FG_NAMES) as FGId[];
 export const rowKey=(row:Row)=>JSON.stringify([...row].sort((a,b)=>a.id.localeCompare(b.id)));
 export const rowName=(row:Row)=>row.map(x=>(x.count>1?`${x.count}个`:'')+FG_NAMES[x.id]).join('＋');
-export const PHASES=['了解肉桂酸的性能','探究肉桂酸的结构','修饰肉桂酸分子','设计合成路线'];
+export const PHASES=[{id:2,name:'探究肉桂酸的结构',label:'环节二'},{id:3,name:'修饰肉桂酸分子',label:'环节三'}];
+export const visiblePhase=(phase:number)=>phase===3||phase===4?3:2;

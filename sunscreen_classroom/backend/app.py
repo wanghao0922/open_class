@@ -55,7 +55,7 @@ class Classroom(Base):
     code: Mapped[str] = mapped_column(String(12), unique=True)
     name: Mapped[str] = mapped_column(String(120))
     total_groups: Mapped[int] = mapped_column(Integer, default=10)
-    phase: Mapped[int] = mapped_column(Integer, default=1)
+    phase: Mapped[int] = mapped_column(Integer, default=2)
     task2: Mapped[str] = mapped_column(String(16), default='not_open')
     task3: Mapped[str] = mapped_column(String(16), default='not_open')
     demo: Mapped[int] = mapped_column(Integer, default=0)
@@ -149,6 +149,10 @@ async def response_headers(request: Request, call_next):
     response.headers['X-Frame-Options'] = 'SAMEORIGIN'
     if request.url.path.startswith('/api'):
         response.headers['Cache-Control'] = 'no-store'
+    elif request.url.path.startswith('/assets/'):
+        response.headers['Cache-Control'] = 'public, max-age=31536000, immutable'
+    elif request.url.path.startswith('/molecules/'):
+        response.headers['Cache-Control'] = 'public, max-age=86400'
     return response
 
 
@@ -207,7 +211,7 @@ def class_json(db, obj):
     groups = db.scalars(select(Group).where(Group.classroom_id == obj.id)).all()
     counts = Counter(db.scalars(select(Submission.task).where(Submission.classroom_id == obj.id)).all())
     return {'id': obj.id, 'code': obj.code, 'name': obj.name, 'total_groups': obj.total_groups,
-            'phase': obj.phase, 'task2': obj.task2, 'task3': obj.task3, 'demo': bool(obj.demo),
+            'phase': 3 if obj.phase in [3, 4] else 2, 'task2': obj.task2, 'task3': obj.task3, 'demo': bool(obj.demo),
             'joined': len(groups), 'submitted2': counts[2], 'submitted3': counts[3], 'created': obj.created}
 
 
@@ -318,7 +322,7 @@ def create_class(data: CreateClass, db: Session = Depends(db_session)):
 
 
 class Control(BaseModel):
-    phase: int = Field(ge=1, le=4)
+    phase: Literal[2, 3]
     action: Literal['open', 'close', 'show']
 
 

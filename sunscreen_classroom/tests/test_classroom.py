@@ -97,6 +97,9 @@ def test_eighty_percent_deduplication_and_replacement(teacher_client):
 
 def test_phase_switch_and_molecule_validation(teacher_client):
     room=create_room(teacher_client)
+    assert room['phase']==2 and room['task2']=='not_open'
+    for removed_phase in [1,4]:
+        assert teacher_client.post(f'/api/teacher/classes/{room["id"]}/control',json={'phase':removed_phase,'action':'show'}).status_code==422
     client=student(room,1)
     control(teacher_client,room,2)
     assert send(client,[ROW1,ROW2]).status_code==200

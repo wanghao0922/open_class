@@ -5,7 +5,7 @@ import {QRCodeSVG} from 'qrcode.react';
 import {FG_NAMES, PHASES} from './types';
 import type {FGId,Molecule,Row,Stats,StatCard,Classroom} from './types';
 
-export function FGDiagram({id,small=false}:{id:FGId;small?:boolean}){
+function FGContent({id}:{id:FGId}){
  const base={fill:'none',stroke:'currentColor',strokeWidth:2.2,strokeLinecap:'round' as const};
  let content;
  if(id==='alkene')content=<><path {...base} d="M61 37 L99 37 M61 43 L99 43 M43 30 L27 16 M43 50 L27 64 M117 30 L133 16 M117 50 L133 64"/><text x="51" y="47">C</text><text x="109" y="47">C</text></>;
@@ -14,11 +14,22 @@ export function FGDiagram({id,small=false}:{id:FGId;small?:boolean}){
  else if(id==='aldehyde')content=<><path {...base} d="M35 43 H58 M73 26 V13 M79 26 V13 M88 43 H109"/><text x="76" y="51">C</text><text x="76" y="12" className="oxygen">O</text><text x="125" y="51">H</text></>;
  else if(id==='ester')content=<><path {...base} d="M20 43 H47 M62 26 V13 M68 26 V13 M77 43 H95 M119 43 H145"/><text x="65" y="51">C</text><text x="65" y="12" className="oxygen">O</text><text x="107" y="51" className="oxygen">O</text></>;
  else content=<><path {...base} d="M33 40 H63"/><text x="99" y="48" className="oxygen">OH</text></>;
- return <svg className={'fg-diagram '+(small?'small':'')} viewBox="0 -5 160 80" role="img" aria-label={FG_NAMES[id]+'结构简式'}><g textAnchor="middle" fontSize="23" fontFamily="Arial,sans-serif" fill="currentColor">{content}</g></svg>;
+ return <>{content}</>;
+}
+
+export function FGDiagram({id,small=false}:{id:FGId;small?:boolean}){
+ return <svg className={'fg-diagram '+(small?'small':'')} viewBox="0 -5 160 80" role="img" aria-label={FG_NAMES[id]+'结构简式'}><g textAnchor="middle" fontSize="23" fontFamily="'Times New Roman',serif" fill="currentColor"><FGContent id={id}/></g></svg>;
+}
+
+export function CombinationDiagram({items}:{items:Row}){
+ const widths=items.map(item=>160+(item.count>1?40+Math.max(0,String(item.count).length-1)*13:0));
+ const width=widths.reduce((sum,value)=>sum+value,0)+Math.max(0,items.length-1)*24;
+ let offset=0;
+ return <svg className="combination-diagram" viewBox={`0 -8 ${width} 90`} role="img" aria-label={items.map(item=>(item.count>1?`${item.count}个`:'')+FG_NAMES[item.id]).join('＋')+'结构简式'}><g textAnchor="middle" fontSize="23" fontFamily="'Times New Roman',serif" fill="currentColor">{items.map((item,i)=>{const x=offset;offset+=widths[i]+24;return <g key={item.id} transform={`translate(${x} 0)`}>{i>0&&<text x="-12" y="48">+</text>}<FGContent id={item.id}/>{item.count>1&&<text className="fg-multiplier" x="160" y="48" textAnchor="start">×{item.count}</text>}</g>;})}</g></svg>;
 }
 
 export function PhaseNav({phase,view,onChange}:{phase:number;view:number;onChange:(n:number)=>void}){
- return <nav className="phases" aria-label="课堂环节">{PHASES.map((name,i)=><button key={name} className={'phase '+(view===i+1?'selected ':'')+(phase===i+1?'current':'')} onClick={()=>onChange(i+1)}><span className="phase-index">{i+1<phase?<Check size={15}/>:String(i+1).padStart(2,'0')}</span><span><small>环节{['一','二','三','四'][i]}</small><strong>{name}</strong></span>{phase===i+1&&<i title="当前课堂环节"/>}</button>)}</nav>;
+ return <nav className="phases" aria-label="课堂环节">{PHASES.map(({id,name,label})=><button key={id} className={'phase '+(view===id?'selected ':'')+(phase===id?'current':'')} onClick={()=>onChange(id)}><span className="phase-index">{id<phase?<Check size={15}/>:String(id).padStart(2,'0')}</span><span><small>{label}</small><strong>{name}</strong></span>{phase===id&&<i title="当前课堂环节"/>}</button>)}</nav>;
 }
 
 export function Modal({title,onClose,children}:{title:string;onClose:()=>void;children:React.ReactNode}){
@@ -40,7 +51,7 @@ function colorFor(key:string){let h=0;for(const c of key)h=(Math.imul(h,31)+c.ch
 export function StatsGrid({stats,task,molecules,teacher=false}:{stats:Stats;task:number;molecules:Molecule[];teacher?:boolean}){
  const [detail,setDetail]=useState<StatCard|null>(null);
  const liveDetail=detail?stats.cards.find(x=>x.key===detail.key)||detail:null;
- return <><div className="stats-caption"><span><span className="live-dot"/>全班实时汇总</span><span><b>{stats.submitted}</b> / {stats.total_groups} 组已提交</span></div>{stats.cards.length===0?<div className="empty-state"><Users size={34}/><h3>等待第一份探索结果</h3><p>小组提交后，统计卡片会自动出现在这里。</p></div>:<div className={'stats-grid '+(task===3?'molecule-stats':'')}>{stats.cards.map((card,index)=>{const [edge,fill]=colorFor(card.key);const mol=molecules.find(x=>x.id===card.molecule_id);return <button type="button" className={'stat-card '+(task===3?'molecule-card':'')} style={{'--card-edge':edge,'--card-fill':fill} as React.CSSProperties} key={card.key} onClick={()=>teacher&&setDetail(card)} disabled={!teacher} aria-label={card.label+'，'+card.count+'组'}><div className="stat-fill" style={{height:`${card.fraction*100}%`}}/><div className="stat-content"><div className="card-top"><span className="rank">{String(index+1).padStart(2,'0')}</span>{teacher&&<ArrowUpRight size={16}/>}</div><h3>{card.label}</h3>{task===2?<div className="combo-structures">{card.items?.map((x,i)=><span key={x.id}>{i>0&&<b className="plus">＋</b>}<span>{x.count>1&&<small>×{x.count}</small>}<FGDiagram id={x.id} small/></span></span>)}</div>:mol&&<><img className="molecule-thumb" src={mol.cloud} alt={mol.name+'电子云教学示意'}/><img className="structure-thumb" src={mol.structure} alt={mol.name+'结构简式'}/></>}<div className="stat-count"><strong>{card.count}<small>组</small></strong><span>{card.count}/{stats.total_groups}组 · {Math.round(card.fraction*100)}%</span></div></div></button>;})}</div>}{liveDetail&&teacher&&<Modal title={liveDetail.label} onClose={()=>setDetail(null)}><p className="muted">提到这一结果的小组</p><div className="member-list">{liveDetail.groups?.map(g=><div key={g.id}><span className="group-dot">{g.number}</span><strong>第{g.number}组</strong><span>{g.reporter}</span></div>)}</div></Modal>}</>;
+ return <><div className="stats-caption"><span><span className="live-dot"/>全班实时汇总</span><span><b>{stats.submitted}</b> / {stats.total_groups} 组已提交</span></div>{stats.cards.length===0?<div className="empty-state"><Users size={34}/><h3>等待第一份探索结果</h3><p>小组提交后，统计卡片会自动出现在这里。</p></div>:<div className={'stats-grid '+(task===3?'molecule-stats':'')}>{stats.cards.map((card,index)=>{const [edge,fill]=colorFor(card.key);const mol=molecules.find(x=>x.id===card.molecule_id);return <button type="button" className={'stat-card '+(task===3?'molecule-card':'')} style={{'--card-edge':edge,'--card-fill':fill} as React.CSSProperties} key={card.key} onClick={()=>teacher&&setDetail(card)} disabled={!teacher} aria-label={card.label+'，'+card.count+'组'}><div className="stat-fill" style={{height:`${card.fraction*100}%`}}/><div className="stat-content"><div className="card-top"><span className="rank">{String(index+1).padStart(2,'0')}</span>{teacher&&<ArrowUpRight size={16}/>}</div><h3>{card.label}</h3>{task===2?<div className="combo-structures"><CombinationDiagram items={card.items||[]}/></div>:mol&&<><img loading="lazy" decoding="async" className="molecule-thumb" src={mol.cloud} alt={mol.name+'电子云教学示意'}/><img loading="lazy" decoding="async" className="structure-thumb" src={mol.structure} alt={mol.name+'结构简式'}/></>}<div className="stat-count"><strong>{card.count}<small>组</small></strong><span>{card.count}/{stats.total_groups}组 · {Math.round(card.fraction*100)}%</span></div></div></button>;})}</div>}{liveDetail&&teacher&&<Modal title={liveDetail.label} onClose={()=>setDetail(null)}><p className="muted">提到这一结果的小组</p><div className="member-list">{liveDetail.groups?.map(g=><div key={g.id}><span className="group-dot">{g.number}</span><strong>第{g.number}组</strong><span>{g.reporter}</span></div>)}</div></Modal>}</>;
 }
 
 // Pointer-based dragging works on touch devices; a tap remains a selection fallback.

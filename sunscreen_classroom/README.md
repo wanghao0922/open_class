@@ -52,18 +52,28 @@ Windows PowerShell，在本目录运行：
 
 应用数据保存在 `data/classroom.db`，停止应用后备份整个 `data` 文件夹即可。素材目录 `frontend/public/molecules` 应随代码发布。用户配置、课堂数据库、日志及图片API密钥不进Git。
 
-## Render 部署准备
+## 公网入口与本地存储
+
+当前公网版使用 `backend.gateway:app`：Render 提供页面和图片，授课电脑主动通过 WSS 连接公网服务，所有课堂 API 请求在本机执行，数据保存至 `data/classroom.db`。不需要开放本机入站端口，也不依赖 Render PostgreSQL。
+
+- 上课前双击 `开启公网课堂.cmd`，保持电脑开机、联网、不休眠。
+- 下课后双击 `关闭公网课堂.cmd`。关闭连接不会删除课堂记录。
+- 首次连接可能需要等待免费网页服务唤醒。断线会自动重连；发送中的操作若提示失败，应重试并核对统计。
+- 本机连接配置位于 `data/relay-config.json`，其中的随机密钥必须与 Render 的 `LOCAL_RELAY_TOKEN` 一致，不提交Git。
+- 网页和图片由 Render 提供；首页图片使用 WebP，统计图片按需加载，不在登录前下载40张分子图片。
+
+## Render 部署配置
 
 仓库根目录新增Blueprint时选择 `sunscreen_classroom/render.yaml`；若手动创建Web Service，Root Directory设为 `sunscreen_classroom`。
 
-Blueprint 会创建独立的免费 Web Service 和 PostgreSQL 数据库，自动将数据库连接地址注入 `DATABASE_URL`，部署时填写教师密码即可。免费数据库会在创建后30天到期；到期前导出课堂记录或迁移到长期数据库。免费服务空闲后会休眠，课前提前访问唤醒。
+Blueprint 创建独立的免费 Web Service。配置 `LOCAL_RELAY_TOKEN` 后，启动本机连接即可。免费服务空闲后会休眠，课前提前访问唤醒。
 
 - Build Command：`pip install -r requirements.txt && cd frontend && npm ci && npm run build`
-- Start Command：`uvicorn backend.app:app --host 0.0.0.0 --port $PORT --workers 1`
-- Health Check：`/api/health`
-- 设置 `TEACHER_USERNAME`、自定义 `TEACHER_PASSWORD`、`COOKIE_SECURE=true`、外部PostgreSQL的 `DATABASE_URL`。
+- Start Command：`uvicorn backend.gateway:app --host 0.0.0.0 --port $PORT --workers 1`
+- Health Check：`/healthz`，同时显示本机是否连接。
+- 设置随机的 `LOCAL_RELAY_TOKEN`，与本机配置一致。教师账号和密码从本机配置读取。
 - 不配置图片API密钥，课堂无需在线生成图片。图片、结构和前端依赖均由应用本身提供，无公共CDN依赖。
-- 免费Web Service重启/休眠会丢失本地写入数据，因此正式公网课堂必须提供外部数据库；不能将SQLite作为Render持久存储。免费实例有冷启动，课前提前打开并完整演练。本交付不代表已完成公网部署。
-- 不应把已有SQLite文件直接当成PostgreSQL使用。上线先创建空数据库和新课堂；如需迁移历史，使用JSON导出保留档案，后续按需迁移。
+- Render 不保存课堂数据库；所有正式记录以授课电脑的 `data/classroom.db` 为准。停用连接后可备份 `data` 文件夹。
+- 如需恢复完全云端存储，可将服务启动模块改回 `backend.app:app`，并配置外部PostgreSQL的 `DATABASE_URL`、教师密码和安全Cookie。不要将 SQLite 数据库直接放到免费Render文件系统上充当持久化存储。
 
 Render官方文档：https://render.com/docs/deploy-fastapi ，https://render.com/docs/free 。
