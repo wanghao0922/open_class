@@ -32,10 +32,10 @@ export function PhaseNav({phase,view,onChange}:{phase:number;view:number;onChang
  return <nav className="phases" aria-label="课堂环节">{PHASES.map(({id,name,label})=><button key={id} className={'phase '+(view===id?'selected ':'')+(phase===id?'current':'')} onClick={()=>onChange(id)}><span className="phase-index">{id<phase?<Check size={15}/>:String(id).padStart(2,'0')}</span><span><small>{label}</small><strong>{name}</strong></span>{phase===id&&<i title="当前课堂环节"/>}</button>)}</nav>;
 }
 
-export function Modal({title,onClose,children}:{title:string;onClose:()=>void;children:React.ReactNode}){
+export function Modal({title,onClose,children,className=''}:{title:string;onClose:()=>void;children:React.ReactNode;className?:string}){
  const closeRef=useRef<HTMLButtonElement>(null);
  useEffect(()=>{const original=document.activeElement as HTMLElement;closeRef.current?.focus();const handler=(e:KeyboardEvent)=>{if(e.key==='Escape')onClose();if(e.key==='Tab'){const items=Array.from(closeRef.current?.closest('[role="dialog"]')?.querySelectorAll<HTMLElement>('button,a,input,select')||[]);const first=items[0],last=items[items.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}}};document.addEventListener('keydown',handler);return()=>{document.removeEventListener('keydown',handler);original?.focus();}},[onClose]);
- return <div className="modal-backdrop" onMouseDown={e=>{if(e.target===e.currentTarget)onClose();}}><section className="modal" role="dialog" aria-modal="true" aria-label={title}><header><h2>{title}</h2><button ref={closeRef} className="icon-button" onClick={onClose} aria-label="关闭"><X/></button></header>{children}</section></div>;
+ return <div className="modal-backdrop" onMouseDown={e=>{if(e.target===e.currentTarget)onClose();}}><section className={'modal '+className} role="dialog" aria-modal="true" aria-label={title}><header><h2>{title}</h2><button ref={closeRef} className="icon-button" onClick={onClose} aria-label="关闭"><X/></button></header>{children}</section></div>;
 }
 
 export function JoinModal({room,onClose}:{room:Classroom;onClose:()=>void}){

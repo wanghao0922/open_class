@@ -174,3 +174,48 @@ def test_demo_is_separate_from_formal_classes(teacher_client):
     assert demo['demo'] is True and demo['code']!=formal['code']
     assert demo['submitted2']==10 and demo['submitted3']==10
     assert teacher_client.get(f'/api/teacher/classes/{formal["id"]}/stats/2').json()['submitted']==0
+
+
+def test_delete_restore_keeps_answers_and_blocks_student_access(teacher_client):
+    room=create_room(teacher_client)
+    other=create_room(teacher_client)
+    control(teacher_client,room,2)
+    learner=student(room,1)
+    assert send(learner,[ROW1,ROW2]).status_code==200
+    base=f'/api/teacher/classes/{room["id"]}'
+    before=teacher_client.get(base+'/export').json()
+    assert learner.delete(base).status_code==403
+    assert learner.get('/api/teacher/trash').status_code==403
+    assert learner.post(base+'/restore').status_code==403
+    with TestClient(app) as anonymous:
+        assert anonymous.delete(base).status_code==401
+        assert anonymous.post(base+'/restore').status_code==401
+    assert teacher_client.delete(base).status_code==200
+    assert teacher_client.delete(base).status_code==200
+    active=teacher_client.get('/api/teacher/classes').json()
+    assert room['id'] not in {r['id'] for r in active}
+    assert other['id'] in {r['id'] for r in active}
+    deleted=teacher_client.get('/api/teacher/trash').json()
+    saved=next(r for r in deleted if r['id']==room['id'])
+    assert saved['submitted2']==1 and saved['task2']=='closed' and saved['deleted_at']
+    assert learner.get('/api/me').status_code==401
+    assert learner.get('/api/student/stats/2').status_code==401
+    assert send(learner,[ROW1,ROW3],1).status_code==401
+    with TestClient(app) as newcomer:
+        assert newcomer.post('/api/auth/join',json={'code':room['code'],'number':2,'reporter':'测试'}).status_code==404
+    assert teacher_client.post(base+'/control',json={'phase':2,'action':'open'}).status_code==404
+    assert teacher_client.patch(base,json={'name':'更改','total_groups':10}).status_code==404
+    assert teacher_client.get(base+'/export').status_code==404
+    assert teacher_client.get(base+'/groups').status_code==404
+    assert teacher_client.get(base+'/stats/2').status_code==404
+    restored=teacher_client.post(base+'/restore').json()
+    assert restored['code']==room['code'] and restored['task2']=='closed'
+    assert restored['joined']==1 and restored['submitted2']==1
+    after=teacher_client.get(base+'/export').json()
+    assert after['groups']==before['groups'] and after['history']==before['history']
+    assert room['id'] not in {r['id'] for r in teacher_client.get('/api/teacher/trash').json()}
+    assert learner.get('/api/me').status_code==200
+    assert send(learner,[ROW1,ROW3],1).status_code==409
+    control(teacher_client,room,2)
+    assert send(learner,[ROW1,ROW3],1).status_code==200
+    learner.close()
