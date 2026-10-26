@@ -1,0 +1,86 @@
+[
+  {
+    "molecule_id": "none__acid",
+    "file": "cinnamic-acid.png",
+    "original_file": "f4c8e79c3a2a8352cb0f91d01f2d461a.png",
+    "kind": "文献数据重绘",
+    "sha256": "7ca8ac45b2b4bdc2fd793116090ba6d75168d5c696803225bb968b8f8f3462d7"
+  },
+  {
+    "molecule_id": "methoxy_para__methyl",
+    "file": "para-methoxy-methyl.png",
+    "original_file": "895561a6d9df59895099c6d10687cfdc.png",
+    "kind": "文献数据重绘",
+    "sha256": "13bdd60fdab33a7fc11518322c95eb4064772712a2609eac1f2ef0dfde5ba9c1"
+  },
+  {
+    "molecule_id": "methoxy_ortho__ethylhexyl",
+    "file": "ortho-methoxy-ethylhexyl.png",
+    "original_file": "ff66f151a99d634572444af1bc6f33a0.png",
+    "kind": "文献数据重绘",
+    "sha256": "f02e93493364aa12ed3654854832091ba2ba541b945dfc60f988afff34233af0"
+  },
+  {
+    "molecule_id": "methoxy_meta__ethylhexyl",
+    "file": "meta-methoxy-ethylhexyl.png",
+    "original_file": "8210cf371b8a715d70815366565bdbf9.png",
+    "kind": "文献数据重绘",
+    "sha256": "511581822a6161b3ec7d28e53c0796dc736c9fe85850f3b443abca87c8b9fdcc"
+  },
+  {
+    "molecule_id": "methoxy_para__ethylhexyl",
+    "file": "para-methoxy-ethylhexyl.png",
+    "original_file": "c45120b1cb5038a4a058681e82387e8b.png",
+    "kind": "文献数据重绘",
+    "sha256": "ee83c2fef03e4f3fadea146a3bd0c9b9a441ee24dbc1edceaaafb401dcc091f4"
+  },
+  {
+    "molecule_id": "methoxy_meta__methyl",
+    "file": "meta-methoxy-methyl.png",
+    "original_file": "6a703629d91d15ea304172ebef0e7ea8.png",
+    "kind": "计算预测",
+    "sha256": "49303c67cf28c30a663c2cd45d510fe7b510e3e9e9d1642d9ee80880f05e8808"
+  },
+  {
+    "molecule_id": "methoxy_ortho__methyl",
+    "file": "ortho-methoxy-methyl.png",
+    "original_file": "306e0a9760da3254108529dd20b8f0cf.png",
+    "kind": "计算预测",
+    "sha256": "9cd1f08da78788eaf4388fbce09b438bdc8bc196f540d071009e0aee15a93cd2"
+  },
+  {
+    "molecule_id": "methoxy_ortho__acid",
+    "file": "ortho-methoxy-acid.png",
+    "original_file": "6e601439607f5c494dddd2389079f015.png",
+    "kind": "文献数据重绘",
+    "sha256": "5f6d9ff768d87dce602cbcb7b9bc33aa20095c47e557dc970dbb559c02fa2009"
+  },
+  {
+    "molecule_id": "methoxy_meta__acid",
+    "file": "meta-methoxy-acid.png",
+    "original_file": "d5e215a5850c73bc22e72bfdf52b7450.png",
+    "kind": "峰位约束拟合预测",
+    "sha256": "e52bb3cdb67028cfa05f11a2ff73d5f1e0f6a71865772fb4b135c170bb3f54e2"
+  },
+  {
+    "molecule_id": "methoxy_para__acid",
+    "file": "para-methoxy-acid.png",
+    "original_file": "e6c8dca95a003ca2a0aabb2cdfe75898.png",
+    "kind": "文献数据重绘",
+    "sha256": "7cf3b2c6c4033f4a08c79b5cd04d61630462d965be6fa50c6bcbb3e02dbe2b10"
+  },
+  {
+    "molecule_id": "none__methyl",
+    "file": "cinnamic-methyl.png",
+    "original_file": "d0a9c642d432c03d34a5af61657dafea.png",
+    "kind": "文献峰位约束拟合预测",
+    "sha256": "454aa196b4efeda2c702dea0bdb20a9860c9628eb697caa87934eb689241843d"
+  },
+  {
+    "molecule_id": "none__ethylhexyl",
+    "file": "cinnamic-ethylhexyl.png",
+    "original_file": "e97efeeab921d3abc69283dd3e6b1e22.png",
+    "kind": "文献峰位约束拟合预测",
+    "sha256": "4e0d75cdd44ad51c4c7eeff354e4389aca439b7e620e8885999e3d09b0898313"
+  }
+]
