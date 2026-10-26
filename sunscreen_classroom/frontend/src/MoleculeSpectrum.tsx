@@ -2,17 +2,17 @@ import {useState} from 'react';
 import {Maximize2} from 'lucide-react';
 import {Modal} from './components';
 import type {Molecule} from './types';
-import cinnamicAcid from './assets/spectra/cinnamic-acid.png';
-import paraMethyl from './assets/spectra/para-methoxy-methyl.png';
-import orthoEthylhexyl from './assets/spectra/ortho-methoxy-ethylhexyl.png';
-import metaEthylhexyl from './assets/spectra/meta-methoxy-ethylhexyl.png';
-import paraEthylhexyl from './assets/spectra/para-methoxy-ethylhexyl.png';
-import metaMethyl from './assets/spectra/meta-methoxy-methyl.png';
-import orthoMethyl from './assets/spectra/ortho-methoxy-methyl.png';
-import orthoAcid from './assets/spectra/ortho-methoxy-acid.png';
-import metaAcid from './assets/spectra/meta-methoxy-acid.png';
-import paraAcid from './assets/spectra/para-methoxy-acid.png';
-import cinnamicMethyl from './assets/spectra/cinnamic-methyl.png';
+import cinnamicAcid from './assets/spectra/cinnamic-acid.jpg';
+import paraMethyl from './assets/spectra/para-methoxy-methyl.jpg';
+import orthoEthylhexyl from './assets/spectra/ortho-methoxy-ethylhexyl.jpg';
+import metaEthylhexyl from './assets/spectra/meta-methoxy-ethylhexyl.jpg';
+import paraEthylhexyl from './assets/spectra/para-methoxy-ethylhexyl.jpg';
+import metaMethyl from './assets/spectra/meta-methoxy-methyl.jpg';
+import orthoMethyl from './assets/spectra/ortho-methoxy-methyl.jpg';
+import orthoAcid from './assets/spectra/ortho-methoxy-acid.jpg';
+import metaAcid from './assets/spectra/meta-methoxy-acid.jpg';
+import paraAcid from './assets/spectra/para-methoxy-acid.jpg';
+import cinnamicMethyl from './assets/spectra/cinnamic-methyl.jpg';
 import cinnamicEthylhexyl from './assets/spectra/cinnamic-ethylhexyl.png';
 
 // User-supplied original images. Match complete structures, including ester and position.
