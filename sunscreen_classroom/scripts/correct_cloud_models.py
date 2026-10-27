@@ -64,9 +64,16 @@ def graph(item):
         neighbors=[b if a==i else a for a,b,_ in bonds if a==i or b==i]
         angles=[math.atan2(atoms[n][2]-y,atoms[n][1]-x) for n in neighbors]
         for _ in range(count):
-            choices=[j*math.pi/90 for j in range(180)]
-            def distance(angle):return min(abs(math.atan2(math.sin(angle-a),math.cos(angle-a))) for a in angles)
-            angle=max(choices,key=distance);angles.append(angle)
+            if i==single and item['ester']=='acid':
+                # A hydroxyl oxygen has bent C-O-H geometry, not a linear
+                # terminal hydrogen. Use a fixed teaching layout, not an
+                # asserted optimized molecular angle; turn H outward.
+                angle=angles[0]+math.radians(108)
+            else:
+                choices=[j*math.pi/90 for j in range(180)]
+                def distance(angle):return min(abs(math.atan2(math.sin(angle-a),math.cos(angle-a))) for a in angles)
+                angle=max(choices,key=distance)
+            angles.append(angle)
             node=atom('H',x+.58*math.cos(angle),y+.58*math.sin(angle));bond(i,node)
     return atoms,bonds,{'ortho':1,'meta':2,'para':3,'ester':carbonyl}
 
@@ -124,22 +131,27 @@ def render(item):
         hr=radius*.16
         draw.ellipse((x-radius*.37-hr,y-radius*.41-hr,x-radius*.37+hr,y-radius*.41+hr),fill=tuple(int(v*.4+255*.6) for v in colors[sym]))
     canvas.save(dest,optimize=True)
+    final_sha256=hashlib.sha256(dest.read_bytes()).hexdigest()
+    item['cloud']=f'/molecules/{dest.name}?v={final_sha256[:12]}'
     item['hotspots']={name:[round(points[index][0]/W*100,3),round(points[index][1]/H*100,3)] for name,index in anchors.items()}
     item['image_status']='ready'
     item['image_kind']='AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算'
     return {'id':item['id'],'model_requested':'gpt-image-2','source_size':list(source.size),'final_size':[W,H],
             **({'texture_source_id':texture_source,'generation':'Existing AI texture reused; no new image API request.'} if texture_source else {}),
             'original_sha256':hashlib.sha256(original.read_bytes()).hexdigest(),
-            'final_sha256':hashlib.sha256(dest.read_bytes()).hexdigest(),
+            'final_sha256':final_sha256,
+            **({'hydroxyl_geometry':'Bent C-O-H at oxygen; fixed 108-degree teaching layout, not an optimized molecular geometry.'} if item['ester']=='acid' else {}),
             'postprocessing':'AI raster colors blurred into cloud texture; molecule connectivity and hydrogen counts corrected from validated molecular graph; qualitative illustration only.'}
 
 def main():
     import argparse
     parser=argparse.ArgumentParser()
-    parser.add_argument('--only-methyl-esters',action='store_true')
+    selection=parser.add_mutually_exclusive_group()
+    selection.add_argument('--only-methyl-esters',action='store_true')
+    selection.add_argument('--only-acids',action='store_true')
     args=parser.parse_args()
-    entries=[item for item in CATALOG if not args.only_methyl_esters or item['ester']=='methyl']
-    existing=json.loads((OUT/'asset-provenance.json').read_text(encoding='utf-8')) if args.only_methyl_esters else []
+    entries=[item for item in CATALOG if (not args.only_methyl_esters or item['ester']=='methyl') and (not args.only_acids or item['ester']=='acid')]
+    existing=json.loads((OUT/'asset-provenance.json').read_text(encoding='utf-8')) if args.only_methyl_esters or args.only_acids else []
     report={item['id']:item for item in existing}
     for item in entries:
         report[item['id']]=render(item)

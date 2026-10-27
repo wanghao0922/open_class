@@ -44,7 +44,7 @@ def main():
             old=previous.get(ident,{})
             catalog.append({'id':ident,'name':name,'ring':key,'position':pos,'ester':ester,
                 'smiles':Chem.MolToSmiles(mol,isomericSmiles=True),'formula':rdMolDescriptors.CalcMolFormula(mol),
-                'structure':f'/molecules/{ident}.svg','cloud':f'/molecules/{ident}.png',
+                'structure':f'/molecules/{ident}.svg','cloud':old.get('cloud',f'/molecules/{ident}.png'),
                 'hotspots':old.get('hotspots',{'ortho':[42,39],'meta':[30,34],'para':[24,50],'ester':[79,48]}),
                 'image_status':'ready' if (OUT/f'{ident}.png').exists() else 'pending',
                 'image_kind':old.get('image_kind','AI教学示意，非量子化学计算')})

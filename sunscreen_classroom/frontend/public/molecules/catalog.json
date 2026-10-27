@@ -8,22 +8,22 @@
     "smiles": "O=C(O)/C=C/c1ccccc1",
     "formula": "C9H8O2",
     "structure": "/molecules/none__acid.svg",
-    "cloud": "/molecules/none__acid.png",
+    "cloud": "/molecules/none__acid.png?v=842501edcf04",
     "hotspots": {
       "ortho": [
-        33.416,
-        37.428
+        33.359,
+        37.454
       ],
       "meta": [
-        23.738,
-        37.428
+        23.701,
+        37.454
       ],
       "para": [
-        18.899,
+        18.873,
         50.0
       ],
       "ester": [
-        73.097,
+        72.957,
         50.0
       ]
     },
@@ -163,23 +163,23 @@
     "smiles": "Cc1ccccc1/C=C/C(=O)O",
     "formula": "C10H10O2",
     "structure": "/molecules/methyl_ortho__acid.svg",
-    "cloud": "/molecules/methyl_ortho__acid.png",
+    "cloud": "/molecules/methyl_ortho__acid.png?v=cfc1637f693e",
     "hotspots": {
       "ortho": [
-        33.416,
-        45.097
+        33.359,
+        45.107
       ],
       "meta": [
-        23.738,
-        45.097
+        23.701,
+        45.107
       ],
       "para": [
-        18.899,
-        57.669
+        18.873,
+        57.653
       ],
       "ester": [
-        73.097,
-        57.669
+        72.957,
+        57.653
       ]
     },
     "image_status": "ready",
@@ -287,23 +287,23 @@
     "smiles": "Cc1cccc(/C=C/C(=O)O)c1",
     "formula": "C10H10O2",
     "structure": "/molecules/methyl_meta__acid.svg",
-    "cloud": "/molecules/methyl_meta__acid.png",
+    "cloud": "/molecules/methyl_meta__acid.png?v=9cff5f34549d",
     "hotspots": {
       "ortho": [
-        33.631,
-        45.114
+        33.574,
+        45.125
       ],
       "meta": [
-        23.988,
-        45.114
+        23.951,
+        45.125
       ],
       "para": [
-        19.166,
-        57.642
+        19.139,
+        57.625
       ],
       "ester": [
-        73.17,
-        57.642
+        73.03,
+        57.625
       ]
     },
     "image_status": "ready",
@@ -411,22 +411,22 @@
     "smiles": "Cc1ccc(/C=C/C(=O)O)cc1",
     "formula": "C10H10O2",
     "structure": "/molecules/methyl_para__acid.svg",
-    "cloud": "/molecules/methyl_para__acid.png",
+    "cloud": "/molecules/methyl_para__acid.png?v=c47b7cf56157",
     "hotspots": {
       "ortho": [
-        40.596,
-        38.931
+        40.533,
+        38.951
       ],
       "meta": [
-        32.075,
-        38.931
+        32.027,
+        38.951
       ],
       "para": [
-        27.814,
+        27.775,
         50.0
       ],
       "ester": [
-        75.534,
+        75.406,
         50.0
       ]
     },
@@ -535,23 +535,23 @@
     "smiles": "COc1ccccc1/C=C/C(=O)O",
     "formula": "C10H10O3",
     "structure": "/molecules/methoxy_ortho__acid.svg",
-    "cloud": "/molecules/methoxy_ortho__acid.png",
+    "cloud": "/molecules/methoxy_ortho__acid.png?v=31cf063be803",
     "hotspots": {
       "ortho": [
-        33.416,
-        46.912
+        33.359,
+        46.919
       ],
       "meta": [
-        23.738,
-        46.912
+        23.701,
+        46.919
       ],
       "para": [
-        18.899,
-        59.484
+        18.873,
+        59.464
       ],
       "ester": [
-        73.097,
-        59.484
+        72.957,
+        59.464
       ]
     },
     "image_status": "ready",
@@ -690,22 +690,22 @@
     "smiles": "COc1cccc(/C=C/C(=O)O)c1",
     "formula": "C10H10O3",
     "structure": "/molecules/methoxy_meta__acid.svg",
-    "cloud": "/molecules/methoxy_meta__acid.png",
+    "cloud": "/molecules/methoxy_meta__acid.png?v=1f587945bb25",
     "hotspots": {
       "ortho": [
-        35.154,
+        35.072,
         52.589
       ],
       "meta": [
-        26.49,
+        26.408,
         52.589
       ],
       "para": [
-        22.158,
+        22.076,
         63.843
       ],
       "ester": [
-        70.676,
+        70.594,
         63.843
       ]
     },
@@ -845,22 +845,22 @@
     "smiles": "COc1ccc(/C=C/C(=O)O)cc1",
     "formula": "C10H10O3",
     "structure": "/molecules/methoxy_para__acid.svg",
-    "cloud": "/molecules/methoxy_para__acid.png",
+    "cloud": "/molecules/methoxy_para__acid.png?v=c9bd25858805",
     "hotspots": {
       "ortho": [
-        43.367,
-        39.511
+        43.303,
+        39.529
       ],
       "meta": [
-        35.292,
-        39.511
+        35.242,
+        39.529
       ],
       "para": [
-        31.255,
+        31.211,
         50.0
       ],
       "ester": [
-        76.475,
+        76.352,
         50.0
       ]
     },
@@ -1000,23 +1000,23 @@
     "smiles": "Nc1ccccc1/C=C/C(=O)O",
     "formula": "C9H9NO2",
     "structure": "/molecules/amino_ortho__acid.svg",
-    "cloud": "/molecules/amino_ortho__acid.png",
+    "cloud": "/molecules/amino_ortho__acid.png?v=af7a7175160c",
     "hotspots": {
       "ortho": [
-        33.416,
-        45.097
+        33.359,
+        45.107
       ],
       "meta": [
-        23.738,
-        45.097
+        23.701,
+        45.107
       ],
       "para": [
-        18.899,
-        57.669
+        18.873,
+        57.653
       ],
       "ester": [
-        73.097,
-        57.669
+        72.957,
+        57.653
       ]
     },
     "image_status": "ready",
@@ -1124,23 +1124,23 @@
     "smiles": "Nc1cccc(/C=C/C(=O)O)c1",
     "formula": "C9H9NO2",
     "structure": "/molecules/amino_meta__acid.svg",
-    "cloud": "/molecules/amino_meta__acid.png",
+    "cloud": "/molecules/amino_meta__acid.png?v=19fa4e8bd94e",
     "hotspots": {
       "ortho": [
-        33.631,
-        45.114
+        33.574,
+        45.125
       ],
       "meta": [
-        23.988,
-        45.114
+        23.951,
+        45.125
       ],
       "para": [
-        19.166,
-        57.642
+        19.139,
+        57.625
       ],
       "ester": [
-        73.17,
-        57.642
+        73.03,
+        57.625
       ]
     },
     "image_status": "ready",
@@ -1248,22 +1248,22 @@
     "smiles": "Nc1ccc(/C=C/C(=O)O)cc1",
     "formula": "C9H9NO2",
     "structure": "/molecules/amino_para__acid.svg",
-    "cloud": "/molecules/amino_para__acid.png",
+    "cloud": "/molecules/amino_para__acid.png?v=456beceed750",
     "hotspots": {
       "ortho": [
-        40.596,
-        38.931
+        40.533,
+        38.951
       ],
       "meta": [
-        32.075,
-        38.931
+        32.027,
+        38.951
       ],
       "para": [
-        27.814,
+        27.775,
         50.0
       ],
       "ester": [
-        75.534,
+        75.406,
         50.0
       ]
     },
