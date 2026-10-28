@@ -35,7 +35,7 @@ export function MoleculeSpectrum({molecule}:{molecule:Molecule}){
   const [expanded,setExpanded]=useState(false);
   const spectrum=SPECTRA[molecule.id];
   const title=molecule.name+'紫外吸收光谱';
-  return <section className="molecule-spectrum" aria-label="紫外吸收光谱" data-molecule-id={molecule.id}>
+  return <section className="panel molecule-spectrum" aria-label="紫外吸收光谱" data-molecule-id={molecule.id}>
     <div className="spectrum-heading">
       <h3>紫外吸收光谱</h3>
       {spectrum&&<span className={'spectrum-kind '+(spectrum.kind==='文献数据重绘'?'':'predicted')}>{spectrum.kind}</span>}
