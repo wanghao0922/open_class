@@ -32,7 +32,7 @@
 .molecule-workspace>.molecule-panel{grid-area:model;min-width:0}
 .molecule-workspace>.modification-palette{grid-area:tools;min-width:0}
 .molecule-workspace>.molecule-spectrum{grid-area:spectrum;align-self:start}
-@media(min-width:761px) and (max-width:1023px){.molecule-workspace{grid-template-columns:minmax(0,52fr) minmax(0,48fr);gap:18px}.molecule-workspace>.molecule-spectrum{padding:20px}.molecule-workspace .spectrum-heading{gap:8px;flex-wrap:wrap}}
+@media(min-width:761px) and (max-width:1023px){.molecule-workspace{grid-template-columns:minmax(0,52fr) minmax(0,48fr);grid-template-rows:auto 1fr;grid-template-areas:"model tools" "model spectrum";gap:18px}.molecule-workspace>.molecule-spectrum{padding:20px}.molecule-workspace .spectrum-heading{gap:8px;flex-wrap:wrap}}
 @media(max-width:760px){.molecule-workspace{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto;grid-template-areas:"tools" "model" "spectrum";gap:18px}.molecule-workspace>.molecule-spectrum{padding:16px}.molecule-workspace .spectrum-heading{gap:8px;flex-wrap:wrap}}
 
 /* Compact ring reagent controls at every viewport size. */
@@ -40,3 +40,20 @@
 .ring-palette .reagent-card .reagent-formula{margin-left:auto}
 .ring-palette .reagent-card>svg{position:static}
 .modification-palette .interaction-hint{margin-top:16px}
+
+.student-main-waiting{display:flex;flex-direction:column;padding-bottom:clamp(44px,10vh,100px)}
+.student-main-waiting .student-course-title{margin-bottom:0}
+.student-waiting{flex:1;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;text-align:center;color:var(--navy)}
+.student-waiting-symbol{display:grid;place-items:center;width:64px;height:64px;border-radius:20px;background:#edf4f8;color:#638d9d;border:1px solid #e0ebf0;box-shadow:0 6px 24px #17396004}
+.student-waiting p{margin:0;font-size:clamp(20px,2vw,28px);font-weight:500;letter-spacing:2px;line-height:1.8;text-wrap:balance}
+@media(max-width:600px){.student-main-waiting{padding-bottom:70px}.student-waiting{min-height:260px;gap:22px}.student-waiting-symbol{width:56px;height:56px;border-radius:18px}.student-waiting p{letter-spacing:1px}}
+
+.structure-result{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(220px,.75fr);column-gap:24px;align-items:center}
+.structure-result>.structure-title,.structure-result>h3,.structure-result>.current-structure,.structure-result>.modification-chips{grid-column:1}
+.structure-result>.molecule-reference{grid-column:2;grid-row:1 / span 4;margin-top:0;align-self:center}
+@media(max-width:760px){.structure-result{display:block}.structure-result>.molecule-reference{margin-top:18px}}
+
+@media(min-width:761px){
+  .molecule-workspace{grid-template-rows:auto minmax(0,1fr)}
+  .molecule-workspace>.molecule-spectrum{height:100%;align-self:stretch}
+}

@@ -31,6 +31,8 @@ const SPECTRA:Record<string,{image:string;kind:'文献数据重绘'|'计算预�
   methoxy_para__acid:{image:paraAcid,kind:'文献数据重绘'},
 };
 
+export const SPECTRUM_IMAGES=Object.values(SPECTRA).map(item=>item.image);
+
 export function MoleculeSpectrum({molecule}:{molecule:Molecule}){
   const [expanded,setExpanded]=useState(false);
   const spectrum=SPECTRA[molecule.id];
