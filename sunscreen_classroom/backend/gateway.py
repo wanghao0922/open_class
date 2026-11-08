@@ -36,6 +36,8 @@ async def headers(request: Request, call_next):
     response.headers['Referrer-Policy'] = 'same-origin'
     if request.url.path.startswith('/api') or request.url.path == '/healthz':
         response.headers['Cache-Control'] = 'no-store'
+    elif response.headers.get('content-type', '').startswith('text/html'):
+        response.headers['Cache-Control'] = 'no-store'
     elif request.url.path.startswith('/assets/'):
         response.headers['Cache-Control'] = 'public, max-age=31536000, immutable'
     elif request.url.path.startswith('/molecules/'):

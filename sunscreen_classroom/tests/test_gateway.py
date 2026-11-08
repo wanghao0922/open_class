@@ -39,6 +39,7 @@ def test_offline_static_catalog_and_connection_auth():
 
 def test_cloud_derivatives_and_cache_policy():
     with TestClient(gateway.app) as client:
+        assert client.get('/teacher').headers['cache-control'] == 'no-store'
         catalog = client.get('/api/catalog')
         assert catalog.headers['cache-control'] == 'no-store'
         for item in catalog.json():

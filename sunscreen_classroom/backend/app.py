@@ -156,6 +156,8 @@ async def response_headers(request: Request, call_next):
     response.headers['X-Frame-Options'] = 'SAMEORIGIN'
     if request.url.path.startswith('/api'):
         response.headers['Cache-Control'] = 'no-store'
+    elif response.headers.get('content-type', '').startswith('text/html'):
+        response.headers['Cache-Control'] = 'no-store'
     elif request.url.path.startswith('/assets/'):
         response.headers['Cache-Control'] = 'public, max-age=31536000, immutable'
     elif request.url.path.startswith('/molecules/'):
