@@ -51,6 +51,11 @@ def test_cloud_derivatives_and_cache_policy():
             assert original.headers['cache-control'] == 'public, max-age=86400'
             assert hashlib.sha256(image.content).hexdigest()[:16] in item['cloud']
             assert len(image.content) < len(original.content)
+            structure = client.get(item['structure'])
+            assert structure.status_code == 200
+            assert structure.headers['content-type'].startswith('image/svg+xml')
+            assert structure.headers['cache-control'] == 'public, max-age=31536000, immutable'
+            assert hashlib.sha256(structure.content).hexdigest()[:16] in item['structure']
             data = image.content
             assert data[:4] == b'RIFF' and data[8:12] == b'WEBP'
         assert client.get('/molecules/missing.0123456789abcdef.webp').headers['cache-control'] == 'no-store'

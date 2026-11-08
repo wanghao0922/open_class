@@ -7,7 +7,7 @@
     "ester": "acid",
     "smiles": "O=C(O)/C=C/c1ccccc1",
     "formula": "C9H8O2",
-    "structure": "/molecules/none__acid.svg",
+    "structure": "/molecules/none__acid.e9ca12e963004acf.svg",
     "cloud": "/molecules/none__acid.b065d86aef14b23c.webp",
     "hotspots": {
       "ortho": [
@@ -39,7 +39,7 @@
     "ester": "ethyl",
     "smiles": "CCOC(=O)/C=C/c1ccccc1",
     "formula": "C11H12O2",
-    "structure": "/molecules/none__ethyl.svg",
+    "structure": "/molecules/none__ethyl.a29e1e8bdd89eeb5.svg",
     "cloud": "/molecules/none__ethyl.537439ef0d7d2c17.webp",
     "hotspots": {
       "ortho": [
@@ -71,7 +71,7 @@
     "ester": "hexyl",
     "smiles": "CCCCCCOC(=O)/C=C/c1ccccc1",
     "formula": "C15H20O2",
-    "structure": "/molecules/none__hexyl.svg",
+    "structure": "/molecules/none__hexyl.596b081bfd850ef1.svg",
     "cloud": "/molecules/none__hexyl.dfe944d7d7e9ff7e.webp",
     "hotspots": {
       "ortho": [
@@ -103,7 +103,7 @@
     "ester": "ethylhexyl",
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccccc1",
     "formula": "C17H24O2",
-    "structure": "/molecules/none__ethylhexyl.svg",
+    "structure": "/molecules/none__ethylhexyl.83ddfce4abd86dc8.svg",
     "cloud": "/molecules/none__ethylhexyl.d37cc6ca445c56a2.webp",
     "hotspots": {
       "ortho": [
@@ -135,7 +135,7 @@
     "ester": "methyl",
     "smiles": "COC(=O)/C=C/c1ccccc1",
     "formula": "C10H10O2",
-    "structure": "/molecules/none__methyl.svg",
+    "structure": "/molecules/none__methyl.28147c799d88c1ec.svg",
     "cloud": "/molecules/none__methyl.87ca52a8f1497c98.webp",
     "hotspots": {
       "ortho": [
@@ -167,7 +167,7 @@
     "ester": "acid",
     "smiles": "Cc1ccccc1/C=C/C(=O)O",
     "formula": "C10H10O2",
-    "structure": "/molecules/methyl_ortho__acid.svg",
+    "structure": "/molecules/methyl_ortho__acid.0d44528efc3c8b98.svg",
     "cloud": "/molecules/methyl_ortho__acid.e387bca9d0211826.webp",
     "hotspots": {
       "ortho": [
@@ -199,7 +199,7 @@
     "ester": "ethyl",
     "smiles": "CCOC(=O)/C=C/c1ccccc1C",
     "formula": "C12H14O2",
-    "structure": "/molecules/methyl_ortho__ethyl.svg",
+    "structure": "/molecules/methyl_ortho__ethyl.b5422d4b70799a7e.svg",
     "cloud": "/molecules/methyl_ortho__ethyl.841a7432f2f5ab4d.webp",
     "hotspots": {
       "ortho": [
@@ -231,7 +231,7 @@
     "ester": "hexyl",
     "smiles": "CCCCCCOC(=O)/C=C/c1ccccc1C",
     "formula": "C16H22O2",
-    "structure": "/molecules/methyl_ortho__hexyl.svg",
+    "structure": "/molecules/methyl_ortho__hexyl.b9d85bffa663b476.svg",
     "cloud": "/molecules/methyl_ortho__hexyl.7c1377a3470075f4.webp",
     "hotspots": {
       "ortho": [
@@ -263,7 +263,7 @@
     "ester": "ethylhexyl",
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccccc1C",
     "formula": "C18H26O2",
-    "structure": "/molecules/methyl_ortho__ethylhexyl.svg",
+    "structure": "/molecules/methyl_ortho__ethylhexyl.8be847c1738c64f4.svg",
     "cloud": "/molecules/methyl_ortho__ethylhexyl.a0a63c8fdf860c4c.webp",
     "hotspots": {
       "ortho": [
@@ -295,7 +295,7 @@
     "ester": "acid",
     "smiles": "Cc1cccc(/C=C/C(=O)O)c1",
     "formula": "C10H10O2",
-    "structure": "/molecules/methyl_meta__acid.svg",
+    "structure": "/molecules/methyl_meta__acid.a640e57099fb9668.svg",
     "cloud": "/molecules/methyl_meta__acid.ea31dddd5a32ac27.webp",
     "hotspots": {
       "ortho": [
@@ -327,7 +327,7 @@
     "ester": "ethyl",
     "smiles": "CCOC(=O)/C=C/c1cccc(C)c1",
     "formula": "C12H14O2",
-    "structure": "/molecules/methyl_meta__ethyl.svg",
+    "structure": "/molecules/methyl_meta__ethyl.730592846234390e.svg",
     "cloud": "/molecules/methyl_meta__ethyl.7925a26a2a5184bf.webp",
     "hotspots": {
       "ortho": [
@@ -359,7 +359,7 @@
     "ester": "hexyl",
     "smiles": "CCCCCCOC(=O)/C=C/c1cccc(C)c1",
     "formula": "C16H22O2",
-    "structure": "/molecules/methyl_meta__hexyl.svg",
+    "structure": "/molecules/methyl_meta__hexyl.e7ec21715c62534e.svg",
     "cloud": "/molecules/methyl_meta__hexyl.201304beceb3f1d4.webp",
     "hotspots": {
       "ortho": [
@@ -391,7 +391,7 @@
     "ester": "ethylhexyl",
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1cccc(C)c1",
     "formula": "C18H26O2",
-    "structure": "/molecules/methyl_meta__ethylhexyl.svg",
+    "structure": "/molecules/methyl_meta__ethylhexyl.bd90beb7117edb1c.svg",
     "cloud": "/molecules/methyl_meta__ethylhexyl.98e2fb30243a5726.webp",
     "hotspots": {
       "ortho": [
@@ -423,7 +423,7 @@
     "ester": "acid",
     "smiles": "Cc1ccc(/C=C/C(=O)O)cc1",
     "formula": "C10H10O2",
-    "structure": "/molecules/methyl_para__acid.svg",
+    "structure": "/molecules/methyl_para__acid.bab69394efe2ac77.svg",
     "cloud": "/molecules/methyl_para__acid.081181b864b1a7e6.webp",
     "hotspots": {
       "ortho": [
@@ -455,7 +455,7 @@
     "ester": "ethyl",
     "smiles": "CCOC(=O)/C=C/c1ccc(C)cc1",
     "formula": "C12H14O2",
-    "structure": "/molecules/methyl_para__ethyl.svg",
+    "structure": "/molecules/methyl_para__ethyl.9fed86a39aea47a4.svg",
     "cloud": "/molecules/methyl_para__ethyl.0a006dd279a274b6.webp",
     "hotspots": {
       "ortho": [
@@ -487,7 +487,7 @@
     "ester": "hexyl",
     "smiles": "CCCCCCOC(=O)/C=C/c1ccc(C)cc1",
     "formula": "C16H22O2",
-    "structure": "/molecules/methyl_para__hexyl.svg",
+    "structure": "/molecules/methyl_para__hexyl.0414afd612fc967b.svg",
     "cloud": "/molecules/methyl_para__hexyl.11e909430eb4d463.webp",
     "hotspots": {
       "ortho": [
@@ -519,7 +519,7 @@
     "ester": "ethylhexyl",
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccc(C)cc1",
     "formula": "C18H26O2",
-    "structure": "/molecules/methyl_para__ethylhexyl.svg",
+    "structure": "/molecules/methyl_para__ethylhexyl.0238e353cf4fe6f5.svg",
     "cloud": "/molecules/methyl_para__ethylhexyl.7b5377e363c13303.webp",
     "hotspots": {
       "ortho": [
@@ -551,7 +551,7 @@
     "ester": "acid",
     "smiles": "COc1ccccc1/C=C/C(=O)O",
     "formula": "C10H10O3",
-    "structure": "/molecules/methoxy_ortho__acid.svg",
+    "structure": "/molecules/methoxy_ortho__acid.4d5fc2124d4590f5.svg",
     "cloud": "/molecules/methoxy_ortho__acid.66348abd56cb88f3.webp",
     "hotspots": {
       "ortho": [
@@ -583,7 +583,7 @@
     "ester": "ethyl",
     "smiles": "CCOC(=O)/C=C/c1ccccc1OC",
     "formula": "C12H14O3",
-    "structure": "/molecules/methoxy_ortho__ethyl.svg",
+    "structure": "/molecules/methoxy_ortho__ethyl.3e6edd5b02e42c62.svg",
     "cloud": "/molecules/methoxy_ortho__ethyl.1ac44330a130ef9f.webp",
     "hotspots": {
       "ortho": [
@@ -615,7 +615,7 @@
     "ester": "hexyl",
     "smiles": "CCCCCCOC(=O)/C=C/c1ccccc1OC",
     "formula": "C16H22O3",
-    "structure": "/molecules/methoxy_ortho__hexyl.svg",
+    "structure": "/molecules/methoxy_ortho__hexyl.9ca60a6550b02225.svg",
     "cloud": "/molecules/methoxy_ortho__hexyl.4f553d7376da454e.webp",
     "hotspots": {
       "ortho": [
@@ -647,7 +647,7 @@
     "ester": "ethylhexyl",
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccccc1OC",
     "formula": "C18H26O3",
-    "structure": "/molecules/methoxy_ortho__ethylhexyl.svg",
+    "structure": "/molecules/methoxy_ortho__ethylhexyl.90916f88e62e5b7e.svg",
     "cloud": "/molecules/methoxy_ortho__ethylhexyl.3ed07a25e617f880.webp",
     "hotspots": {
       "ortho": [
@@ -679,7 +679,7 @@
     "ester": "methyl",
     "smiles": "COC(=O)/C=C/c1ccccc1OC",
     "formula": "C11H12O3",
-    "structure": "/molecules/methoxy_ortho__methyl.svg",
+    "structure": "/molecules/methoxy_ortho__methyl.c9705986b561c951.svg",
     "cloud": "/molecules/methoxy_ortho__methyl.09dceed3b155c53f.webp",
     "hotspots": {
       "ortho": [
@@ -711,7 +711,7 @@
     "ester": "acid",
     "smiles": "COc1cccc(/C=C/C(=O)O)c1",
     "formula": "C10H10O3",
-    "structure": "/molecules/methoxy_meta__acid.svg",
+    "structure": "/molecules/methoxy_meta__acid.4a01bf49e1691c2b.svg",
     "cloud": "/molecules/methoxy_meta__acid.9a9995648c562e76.webp",
     "hotspots": {
       "ortho": [
@@ -743,7 +743,7 @@
     "ester": "ethyl",
     "smiles": "CCOC(=O)/C=C/c1cccc(OC)c1",
     "formula": "C12H14O3",
-    "structure": "/molecules/methoxy_meta__ethyl.svg",
+    "structure": "/molecules/methoxy_meta__ethyl.3c4ea6549fa8957c.svg",
     "cloud": "/molecules/methoxy_meta__ethyl.59295277730a3e9c.webp",
     "hotspots": {
       "ortho": [
@@ -775,7 +775,7 @@
     "ester": "hexyl",
     "smiles": "CCCCCCOC(=O)/C=C/c1cccc(OC)c1",
     "formula": "C16H22O3",
-    "structure": "/molecules/methoxy_meta__hexyl.svg",
+    "structure": "/molecules/methoxy_meta__hexyl.2fae78c0a8117a98.svg",
     "cloud": "/molecules/methoxy_meta__hexyl.8216c7aec43710c6.webp",
     "hotspots": {
       "ortho": [
@@ -807,7 +807,7 @@
     "ester": "ethylhexyl",
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1cccc(OC)c1",
     "formula": "C18H26O3",
-    "structure": "/molecules/methoxy_meta__ethylhexyl.svg",
+    "structure": "/molecules/methoxy_meta__ethylhexyl.c00623cca756ff88.svg",
     "cloud": "/molecules/methoxy_meta__ethylhexyl.cc7bbe4ec2450e7b.webp",
     "hotspots": {
       "ortho": [
@@ -839,7 +839,7 @@
     "ester": "methyl",
     "smiles": "COC(=O)/C=C/c1cccc(OC)c1",
     "formula": "C11H12O3",
-    "structure": "/molecules/methoxy_meta__methyl.svg",
+    "structure": "/molecules/methoxy_meta__methyl.4895ccd96a96d66e.svg",
     "cloud": "/molecules/methoxy_meta__methyl.46f26e96087de561.webp",
     "hotspots": {
       "ortho": [
@@ -871,7 +871,7 @@
     "ester": "acid",
     "smiles": "COc1ccc(/C=C/C(=O)O)cc1",
     "formula": "C10H10O3",
-    "structure": "/molecules/methoxy_para__acid.svg",
+    "structure": "/molecules/methoxy_para__acid.35961426dead15f3.svg",
     "cloud": "/molecules/methoxy_para__acid.ca3a257457b5d948.webp",
     "hotspots": {
       "ortho": [
@@ -903,7 +903,7 @@
     "ester": "ethyl",
     "smiles": "CCOC(=O)/C=C/c1ccc(OC)cc1",
     "formula": "C12H14O3",
-    "structure": "/molecules/methoxy_para__ethyl.svg",
+    "structure": "/molecules/methoxy_para__ethyl.180b7f8953aef0ed.svg",
     "cloud": "/molecules/methoxy_para__ethyl.34de8b0cdb9883e2.webp",
     "hotspots": {
       "ortho": [
@@ -935,7 +935,7 @@
     "ester": "hexyl",
     "smiles": "CCCCCCOC(=O)/C=C/c1ccc(OC)cc1",
     "formula": "C16H22O3",
-    "structure": "/molecules/methoxy_para__hexyl.svg",
+    "structure": "/molecules/methoxy_para__hexyl.6bd5e2912ddc7334.svg",
     "cloud": "/molecules/methoxy_para__hexyl.a421259cd5d35b05.webp",
     "hotspots": {
       "ortho": [
@@ -967,7 +967,7 @@
     "ester": "ethylhexyl",
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccc(OC)cc1",
     "formula": "C18H26O3",
-    "structure": "/molecules/methoxy_para__ethylhexyl.svg",
+    "structure": "/molecules/methoxy_para__ethylhexyl.40ae14eafdb87bfc.svg",
     "cloud": "/molecules/methoxy_para__ethylhexyl.2da416f4c332202a.webp",
     "hotspots": {
       "ortho": [
@@ -999,7 +999,7 @@
     "ester": "methyl",
     "smiles": "COC(=O)/C=C/c1ccc(OC)cc1",
     "formula": "C11H12O3",
-    "structure": "/molecules/methoxy_para__methyl.svg",
+    "structure": "/molecules/methoxy_para__methyl.e22fe7dc67badb77.svg",
     "cloud": "/molecules/methoxy_para__methyl.e7f861a06c4825d6.webp",
     "hotspots": {
       "ortho": [
@@ -1031,7 +1031,7 @@
     "ester": "acid",
     "smiles": "Nc1ccccc1/C=C/C(=O)O",
     "formula": "C9H9NO2",
-    "structure": "/molecules/amino_ortho__acid.svg",
+    "structure": "/molecules/amino_ortho__acid.eb86e710931cb4f9.svg",
     "cloud": "/molecules/amino_ortho__acid.ce46182d663fc72c.webp",
     "hotspots": {
       "ortho": [
@@ -1063,7 +1063,7 @@
     "ester": "ethyl",
     "smiles": "CCOC(=O)/C=C/c1ccccc1N",
     "formula": "C11H13NO2",
-    "structure": "/molecules/amino_ortho__ethyl.svg",
+    "structure": "/molecules/amino_ortho__ethyl.303dd9c01b2a10f4.svg",
     "cloud": "/molecules/amino_ortho__ethyl.2f760dfbd3d58d7e.webp",
     "hotspots": {
       "ortho": [
@@ -1095,7 +1095,7 @@
     "ester": "hexyl",
     "smiles": "CCCCCCOC(=O)/C=C/c1ccccc1N",
     "formula": "C15H21NO2",
-    "structure": "/molecules/amino_ortho__hexyl.svg",
+    "structure": "/molecules/amino_ortho__hexyl.597ce9d2bea7cd4d.svg",
     "cloud": "/molecules/amino_ortho__hexyl.a30caf90fa167d3f.webp",
     "hotspots": {
       "ortho": [
@@ -1127,7 +1127,7 @@
     "ester": "ethylhexyl",
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccccc1N",
     "formula": "C17H25NO2",
-    "structure": "/molecules/amino_ortho__ethylhexyl.svg",
+    "structure": "/molecules/amino_ortho__ethylhexyl.78b71c6799422454.svg",
     "cloud": "/molecules/amino_ortho__ethylhexyl.55e8f649404668f0.webp",
     "hotspots": {
       "ortho": [
@@ -1159,7 +1159,7 @@
     "ester": "acid",
     "smiles": "Nc1cccc(/C=C/C(=O)O)c1",
     "formula": "C9H9NO2",
-    "structure": "/molecules/amino_meta__acid.svg",
+    "structure": "/molecules/amino_meta__acid.44b19560ea5e6a26.svg",
     "cloud": "/molecules/amino_meta__acid.3a9acc05ca5b66a9.webp",
     "hotspots": {
       "ortho": [
@@ -1191,7 +1191,7 @@
     "ester": "ethyl",
     "smiles": "CCOC(=O)/C=C/c1cccc(N)c1",
     "formula": "C11H13NO2",
-    "structure": "/molecules/amino_meta__ethyl.svg",
+    "structure": "/molecules/amino_meta__ethyl.1a48b0474e9acbf3.svg",
     "cloud": "/molecules/amino_meta__ethyl.21336bd33f9d2f16.webp",
     "hotspots": {
       "ortho": [
@@ -1223,7 +1223,7 @@
     "ester": "hexyl",
     "smiles": "CCCCCCOC(=O)/C=C/c1cccc(N)c1",
     "formula": "C15H21NO2",
-    "structure": "/molecules/amino_meta__hexyl.svg",
+    "structure": "/molecules/amino_meta__hexyl.fd36205e348ac61b.svg",
     "cloud": "/molecules/amino_meta__hexyl.7df09aba57f49dab.webp",
     "hotspots": {
       "ortho": [
@@ -1255,7 +1255,7 @@
     "ester": "ethylhexyl",
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1cccc(N)c1",
     "formula": "C17H25NO2",
-    "structure": "/molecules/amino_meta__ethylhexyl.svg",
+    "structure": "/molecules/amino_meta__ethylhexyl.3c82aa43bc7ceb8a.svg",
     "cloud": "/molecules/amino_meta__ethylhexyl.e16844808a06bfe2.webp",
     "hotspots": {
       "ortho": [
@@ -1287,7 +1287,7 @@
     "ester": "acid",
     "smiles": "Nc1ccc(/C=C/C(=O)O)cc1",
     "formula": "C9H9NO2",
-    "structure": "/molecules/amino_para__acid.svg",
+    "structure": "/molecules/amino_para__acid.1efc2ea34b7724ed.svg",
     "cloud": "/molecules/amino_para__acid.eeb3f1b592444141.webp",
     "hotspots": {
       "ortho": [
@@ -1319,7 +1319,7 @@
     "ester": "ethyl",
     "smiles": "CCOC(=O)/C=C/c1ccc(N)cc1",
     "formula": "C11H13NO2",
-    "structure": "/molecules/amino_para__ethyl.svg",
+    "structure": "/molecules/amino_para__ethyl.f0524fffd839c50b.svg",
     "cloud": "/molecules/amino_para__ethyl.ed6d1769afefc826.webp",
     "hotspots": {
       "ortho": [
@@ -1351,7 +1351,7 @@
     "ester": "hexyl",
     "smiles": "CCCCCCOC(=O)/C=C/c1ccc(N)cc1",
     "formula": "C15H21NO2",
-    "structure": "/molecules/amino_para__hexyl.svg",
+    "structure": "/molecules/amino_para__hexyl.93f2a2bebc6ee7d6.svg",
     "cloud": "/molecules/amino_para__hexyl.5492dce3d38015f2.webp",
     "hotspots": {
       "ortho": [
@@ -1383,7 +1383,7 @@
     "ester": "ethylhexyl",
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccc(N)cc1",
     "formula": "C17H25NO2",
-    "structure": "/molecules/amino_para__ethylhexyl.svg",
+    "structure": "/molecules/amino_para__ethylhexyl.ffe89f1ebaf244b6.svg",
     "cloud": "/molecules/amino_para__ethylhexyl.27352c63f52d8c5e.webp",
     "hotspots": {
       "ortho": [

@@ -8,7 +8,7 @@ mimetypes.add_type('image/webp', '.webp')
 
 
 def molecule_cache_control(path: str):
-    if re.fullmatch(r'/molecules/[a-z_]+\.[0-9a-f]{16}\.webp', path):
+    if re.fullmatch(r'/molecules/[a-z_]+\.[0-9a-f]{16}\.(webp|svg)', path):
         return 'public, max-age=31536000, immutable'
     return 'public, max-age=86400'
 
