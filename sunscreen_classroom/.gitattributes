@@ -1,0 +1,2 @@
+# Keep content-addressed SVG bytes identical on Windows and Render/Linux.
+frontend/public/molecules/*.*.svg text eol=lf
