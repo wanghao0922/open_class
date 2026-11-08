@@ -3,6 +3,7 @@ import asyncio
 import base64
 import json
 import os
+import hashlib
 from concurrent.futures import ThreadPoolExecutor
 
 import pytest
@@ -34,6 +35,24 @@ def test_offline_static_catalog_and_connection_auth():
         with pytest.raises(WebSocketDisconnect):
             with client.websocket_connect('/relay/connect', headers={'Authorization': 'Bearer wrong'}):
                 pass
+
+
+def test_cloud_derivatives_and_cache_policy():
+    with TestClient(gateway.app) as client:
+        catalog = client.get('/api/catalog')
+        assert catalog.headers['cache-control'] == 'no-store'
+        for item in catalog.json():
+            image = client.get(item['cloud'])
+            original = client.get(item['cloud_fallback'])
+            assert image.status_code == original.status_code == 200
+            assert image.headers['content-type'] == 'image/webp'
+            assert image.headers['cache-control'] == 'public, max-age=31536000, immutable'
+            assert original.headers['cache-control'] == 'public, max-age=86400'
+            assert hashlib.sha256(image.content).hexdigest()[:16] in item['cloud']
+            assert len(image.content) < len(original.content)
+            data = image.content
+            assert data[:4] == b'RIFF' and data[8:12] == b'WEBP'
+        assert client.get('/molecules/missing.0123456789abcdef.webp').headers['cache-control'] == 'no-store'
 
 
 def test_multiplex_30_requests_and_secure_cookie():

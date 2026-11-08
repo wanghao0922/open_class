@@ -80,3 +80,11 @@ Blueprint 创建独立的免费 Web Service。配置 `LOCAL_RELAY_TOKEN` 后，�
 - 如需恢复完全云端存储，可将服务启动模块改回 `backend.app:app`，并配置外部PostgreSQL的 `DATABASE_URL`、教师密码和安全Cookie。不要将 SQLite 数据库直接放到免费Render文件系统上充当持久化存储。
 
 Render官方文档：https://render.com/docs/deploy-fastapi ，https://render.com/docs/free 。
+
+### 电子云图片压缩
+
+更新原始电子云 PNG 后，在安装了 Pillow 的开发 Python 环境中运行
+`python scripts/optimize_clouds.py`，再执行前端构建。脚本保留 PNG，生成同尺寸、质量 90
+的 WebP，并更新目录中的图片地址。带内容指纹的 WebP 使用一年浏览器缓存；加载失败会回退 PNG。
+提交时需同时包含生成的 WebP 和 `frontend/public/molecules/catalog.json`，线上构建无需安装 Pillow。
+后台预加载以可选电子云为先、最多并发 3 个请求，当前工作台图片使用高优先级。

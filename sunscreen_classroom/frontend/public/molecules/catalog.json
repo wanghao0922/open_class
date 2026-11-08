@@ -8,7 +8,7 @@
     "smiles": "O=C(O)/C=C/c1ccccc1",
     "formula": "C9H8O2",
     "structure": "/molecules/none__acid.svg",
-    "cloud": "/molecules/none__acid.png?v=842501edcf04",
+    "cloud": "/molecules/none__acid.b065d86aef14b23c.webp",
     "hotspots": {
       "ortho": [
         33.359,
@@ -28,7 +28,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/none__acid.png?v=842501edcf04"
   },
   {
     "id": "none__ethyl",
@@ -39,7 +40,7 @@
     "smiles": "CCOC(=O)/C=C/c1ccccc1",
     "formula": "C11H12O2",
     "structure": "/molecules/none__ethyl.svg",
-    "cloud": "/molecules/none__ethyl.png",
+    "cloud": "/molecules/none__ethyl.537439ef0d7d2c17.webp",
     "hotspots": {
       "ortho": [
         28.097,
@@ -59,7 +60,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/none__ethyl.png"
   },
   {
     "id": "none__hexyl",
@@ -70,7 +72,7 @@
     "smiles": "CCCCCCOC(=O)/C=C/c1ccccc1",
     "formula": "C15H20O2",
     "structure": "/molecules/none__hexyl.svg",
-    "cloud": "/molecules/none__hexyl.png",
+    "cloud": "/molecules/none__hexyl.dfe944d7d7e9ff7e.webp",
     "hotspots": {
       "ortho": [
         22.333,
@@ -90,7 +92,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/none__hexyl.png"
   },
   {
     "id": "none__ethylhexyl",
@@ -101,7 +104,7 @@
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccccc1",
     "formula": "C17H24O2",
     "structure": "/molecules/none__ethylhexyl.svg",
-    "cloud": "/molecules/none__ethylhexyl.png",
+    "cloud": "/molecules/none__ethylhexyl.d37cc6ca445c56a2.webp",
     "hotspots": {
       "ortho": [
         22.333,
@@ -121,7 +124,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/none__ethylhexyl.png"
   },
   {
     "id": "none__methyl",
@@ -132,7 +136,7 @@
     "smiles": "COC(=O)/C=C/c1ccccc1",
     "formula": "C10H10O2",
     "structure": "/molecules/none__methyl.svg",
-    "cloud": "/molecules/none__methyl.png",
+    "cloud": "/molecules/none__methyl.87ca52a8f1497c98.webp",
     "hotspots": {
       "ortho": [
         30.33,
@@ -152,7 +156,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/none__methyl.png"
   },
   {
     "id": "methyl_ortho__acid",
@@ -163,7 +168,7 @@
     "smiles": "Cc1ccccc1/C=C/C(=O)O",
     "formula": "C10H10O2",
     "structure": "/molecules/methyl_ortho__acid.svg",
-    "cloud": "/molecules/methyl_ortho__acid.png?v=cfc1637f693e",
+    "cloud": "/molecules/methyl_ortho__acid.e387bca9d0211826.webp",
     "hotspots": {
       "ortho": [
         33.359,
@@ -183,7 +188,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methyl_ortho__acid.png?v=cfc1637f693e"
   },
   {
     "id": "methyl_ortho__ethyl",
@@ -194,7 +200,7 @@
     "smiles": "CCOC(=O)/C=C/c1ccccc1C",
     "formula": "C12H14O2",
     "structure": "/molecules/methyl_ortho__ethyl.svg",
-    "cloud": "/molecules/methyl_ortho__ethyl.png",
+    "cloud": "/molecules/methyl_ortho__ethyl.841a7432f2f5ab4d.webp",
     "hotspots": {
       "ortho": [
         28.097,
@@ -214,7 +220,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methyl_ortho__ethyl.png"
   },
   {
     "id": "methyl_ortho__hexyl",
@@ -225,7 +232,7 @@
     "smiles": "CCCCCCOC(=O)/C=C/c1ccccc1C",
     "formula": "C16H22O2",
     "structure": "/molecules/methyl_ortho__hexyl.svg",
-    "cloud": "/molecules/methyl_ortho__hexyl.png",
+    "cloud": "/molecules/methyl_ortho__hexyl.7c1377a3470075f4.webp",
     "hotspots": {
       "ortho": [
         22.333,
@@ -245,7 +252,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methyl_ortho__hexyl.png"
   },
   {
     "id": "methyl_ortho__ethylhexyl",
@@ -256,7 +264,7 @@
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccccc1C",
     "formula": "C18H26O2",
     "structure": "/molecules/methyl_ortho__ethylhexyl.svg",
-    "cloud": "/molecules/methyl_ortho__ethylhexyl.png",
+    "cloud": "/molecules/methyl_ortho__ethylhexyl.a0a63c8fdf860c4c.webp",
     "hotspots": {
       "ortho": [
         22.333,
@@ -276,7 +284,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methyl_ortho__ethylhexyl.png"
   },
   {
     "id": "methyl_meta__acid",
@@ -287,7 +296,7 @@
     "smiles": "Cc1cccc(/C=C/C(=O)O)c1",
     "formula": "C10H10O2",
     "structure": "/molecules/methyl_meta__acid.svg",
-    "cloud": "/molecules/methyl_meta__acid.png?v=9cff5f34549d",
+    "cloud": "/molecules/methyl_meta__acid.ea31dddd5a32ac27.webp",
     "hotspots": {
       "ortho": [
         33.574,
@@ -307,7 +316,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methyl_meta__acid.png?v=9cff5f34549d"
   },
   {
     "id": "methyl_meta__ethyl",
@@ -318,7 +328,7 @@
     "smiles": "CCOC(=O)/C=C/c1cccc(C)c1",
     "formula": "C12H14O2",
     "structure": "/molecules/methyl_meta__ethyl.svg",
-    "cloud": "/molecules/methyl_meta__ethyl.png",
+    "cloud": "/molecules/methyl_meta__ethyl.7925a26a2a5184bf.webp",
     "hotspots": {
       "ortho": [
         28.285,
@@ -338,7 +348,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methyl_meta__ethyl.png"
   },
   {
     "id": "methyl_meta__hexyl",
@@ -349,7 +360,7 @@
     "smiles": "CCCCCCOC(=O)/C=C/c1cccc(C)c1",
     "formula": "C16H22O2",
     "structure": "/molecules/methyl_meta__hexyl.svg",
-    "cloud": "/molecules/methyl_meta__hexyl.png",
+    "cloud": "/molecules/methyl_meta__hexyl.201304beceb3f1d4.webp",
     "hotspots": {
       "ortho": [
         22.484,
@@ -369,7 +380,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methyl_meta__hexyl.png"
   },
   {
     "id": "methyl_meta__ethylhexyl",
@@ -380,7 +392,7 @@
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1cccc(C)c1",
     "formula": "C18H26O2",
     "structure": "/molecules/methyl_meta__ethylhexyl.svg",
-    "cloud": "/molecules/methyl_meta__ethylhexyl.png",
+    "cloud": "/molecules/methyl_meta__ethylhexyl.98e2fb30243a5726.webp",
     "hotspots": {
       "ortho": [
         22.484,
@@ -400,7 +412,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methyl_meta__ethylhexyl.png"
   },
   {
     "id": "methyl_para__acid",
@@ -411,7 +424,7 @@
     "smiles": "Cc1ccc(/C=C/C(=O)O)cc1",
     "formula": "C10H10O2",
     "structure": "/molecules/methyl_para__acid.svg",
-    "cloud": "/molecules/methyl_para__acid.png?v=c47b7cf56157",
+    "cloud": "/molecules/methyl_para__acid.081181b864b1a7e6.webp",
     "hotspots": {
       "ortho": [
         40.533,
@@ -431,7 +444,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methyl_para__acid.png?v=c47b7cf56157"
   },
   {
     "id": "methyl_para__ethyl",
@@ -442,7 +456,7 @@
     "smiles": "CCOC(=O)/C=C/c1ccc(C)cc1",
     "formula": "C12H14O2",
     "structure": "/molecules/methyl_para__ethyl.svg",
-    "cloud": "/molecules/methyl_para__ethyl.png",
+    "cloud": "/molecules/methyl_para__ethyl.0a006dd279a274b6.webp",
     "hotspots": {
       "ortho": [
         34.519,
@@ -462,7 +476,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methyl_para__ethyl.png"
   },
   {
     "id": "methyl_para__hexyl",
@@ -473,7 +488,7 @@
     "smiles": "CCCCCCOC(=O)/C=C/c1ccc(C)cc1",
     "formula": "C16H22O2",
     "structure": "/molecules/methyl_para__hexyl.svg",
-    "cloud": "/molecules/methyl_para__hexyl.png",
+    "cloud": "/molecules/methyl_para__hexyl.11e909430eb4d463.webp",
     "hotspots": {
       "ortho": [
         27.594,
@@ -493,7 +508,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methyl_para__hexyl.png"
   },
   {
     "id": "methyl_para__ethylhexyl",
@@ -504,7 +520,7 @@
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccc(C)cc1",
     "formula": "C18H26O2",
     "structure": "/molecules/methyl_para__ethylhexyl.svg",
-    "cloud": "/molecules/methyl_para__ethylhexyl.png",
+    "cloud": "/molecules/methyl_para__ethylhexyl.7b5377e363c13303.webp",
     "hotspots": {
       "ortho": [
         27.594,
@@ -524,7 +540,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methyl_para__ethylhexyl.png"
   },
   {
     "id": "methoxy_ortho__acid",
@@ -535,7 +552,7 @@
     "smiles": "COc1ccccc1/C=C/C(=O)O",
     "formula": "C10H10O3",
     "structure": "/molecules/methoxy_ortho__acid.svg",
-    "cloud": "/molecules/methoxy_ortho__acid.png?v=31cf063be803",
+    "cloud": "/molecules/methoxy_ortho__acid.66348abd56cb88f3.webp",
     "hotspots": {
       "ortho": [
         33.359,
@@ -555,7 +572,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_ortho__acid.png?v=31cf063be803"
   },
   {
     "id": "methoxy_ortho__ethyl",
@@ -566,7 +584,7 @@
     "smiles": "CCOC(=O)/C=C/c1ccccc1OC",
     "formula": "C12H14O3",
     "structure": "/molecules/methoxy_ortho__ethyl.svg",
-    "cloud": "/molecules/methoxy_ortho__ethyl.png",
+    "cloud": "/molecules/methoxy_ortho__ethyl.1ac44330a130ef9f.webp",
     "hotspots": {
       "ortho": [
         28.097,
@@ -586,7 +604,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_ortho__ethyl.png"
   },
   {
     "id": "methoxy_ortho__hexyl",
@@ -597,7 +616,7 @@
     "smiles": "CCCCCCOC(=O)/C=C/c1ccccc1OC",
     "formula": "C16H22O3",
     "structure": "/molecules/methoxy_ortho__hexyl.svg",
-    "cloud": "/molecules/methoxy_ortho__hexyl.png",
+    "cloud": "/molecules/methoxy_ortho__hexyl.4f553d7376da454e.webp",
     "hotspots": {
       "ortho": [
         22.333,
@@ -617,7 +636,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_ortho__hexyl.png"
   },
   {
     "id": "methoxy_ortho__ethylhexyl",
@@ -628,7 +648,7 @@
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccccc1OC",
     "formula": "C18H26O3",
     "structure": "/molecules/methoxy_ortho__ethylhexyl.svg",
-    "cloud": "/molecules/methoxy_ortho__ethylhexyl.png",
+    "cloud": "/molecules/methoxy_ortho__ethylhexyl.3ed07a25e617f880.webp",
     "hotspots": {
       "ortho": [
         22.333,
@@ -648,7 +668,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_ortho__ethylhexyl.png"
   },
   {
     "id": "methoxy_ortho__methyl",
@@ -659,7 +680,7 @@
     "smiles": "COC(=O)/C=C/c1ccccc1OC",
     "formula": "C11H12O3",
     "structure": "/molecules/methoxy_ortho__methyl.svg",
-    "cloud": "/molecules/methoxy_ortho__methyl.png",
+    "cloud": "/molecules/methoxy_ortho__methyl.09dceed3b155c53f.webp",
     "hotspots": {
       "ortho": [
         30.33,
@@ -679,7 +700,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_ortho__methyl.png"
   },
   {
     "id": "methoxy_meta__acid",
@@ -690,7 +712,7 @@
     "smiles": "COc1cccc(/C=C/C(=O)O)c1",
     "formula": "C10H10O3",
     "structure": "/molecules/methoxy_meta__acid.svg",
-    "cloud": "/molecules/methoxy_meta__acid.png?v=1f587945bb25",
+    "cloud": "/molecules/methoxy_meta__acid.9a9995648c562e76.webp",
     "hotspots": {
       "ortho": [
         35.072,
@@ -710,7 +732,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_meta__acid.png?v=1f587945bb25"
   },
   {
     "id": "methoxy_meta__ethyl",
@@ -721,7 +744,7 @@
     "smiles": "CCOC(=O)/C=C/c1cccc(OC)c1",
     "formula": "C12H14O3",
     "structure": "/molecules/methoxy_meta__ethyl.svg",
-    "cloud": "/molecules/methoxy_meta__ethyl.png",
+    "cloud": "/molecules/methoxy_meta__ethyl.59295277730a3e9c.webp",
     "hotspots": {
       "ortho": [
         28.097,
@@ -741,7 +764,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_meta__ethyl.png"
   },
   {
     "id": "methoxy_meta__hexyl",
@@ -752,7 +776,7 @@
     "smiles": "CCCCCCOC(=O)/C=C/c1cccc(OC)c1",
     "formula": "C16H22O3",
     "structure": "/molecules/methoxy_meta__hexyl.svg",
-    "cloud": "/molecules/methoxy_meta__hexyl.png",
+    "cloud": "/molecules/methoxy_meta__hexyl.8216c7aec43710c6.webp",
     "hotspots": {
       "ortho": [
         22.333,
@@ -772,7 +796,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_meta__hexyl.png"
   },
   {
     "id": "methoxy_meta__ethylhexyl",
@@ -783,7 +808,7 @@
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1cccc(OC)c1",
     "formula": "C18H26O3",
     "structure": "/molecules/methoxy_meta__ethylhexyl.svg",
-    "cloud": "/molecules/methoxy_meta__ethylhexyl.png",
+    "cloud": "/molecules/methoxy_meta__ethylhexyl.cc7bbe4ec2450e7b.webp",
     "hotspots": {
       "ortho": [
         22.333,
@@ -803,7 +828,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_meta__ethylhexyl.png"
   },
   {
     "id": "methoxy_meta__methyl",
@@ -814,7 +840,7 @@
     "smiles": "COC(=O)/C=C/c1cccc(OC)c1",
     "formula": "C11H12O3",
     "structure": "/molecules/methoxy_meta__methyl.svg",
-    "cloud": "/molecules/methoxy_meta__methyl.png",
+    "cloud": "/molecules/methoxy_meta__methyl.46f26e96087de561.webp",
     "hotspots": {
       "ortho": [
         31.368,
@@ -834,7 +860,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_meta__methyl.png"
   },
   {
     "id": "methoxy_para__acid",
@@ -845,7 +872,7 @@
     "smiles": "COc1ccc(/C=C/C(=O)O)cc1",
     "formula": "C10H10O3",
     "structure": "/molecules/methoxy_para__acid.svg",
-    "cloud": "/molecules/methoxy_para__acid.png?v=c9bd25858805",
+    "cloud": "/molecules/methoxy_para__acid.ca3a257457b5d948.webp",
     "hotspots": {
       "ortho": [
         43.303,
@@ -865,7 +892,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_para__acid.png?v=c9bd25858805"
   },
   {
     "id": "methoxy_para__ethyl",
@@ -876,7 +904,7 @@
     "smiles": "CCOC(=O)/C=C/c1ccc(OC)cc1",
     "formula": "C12H14O3",
     "structure": "/molecules/methoxy_para__ethyl.svg",
-    "cloud": "/molecules/methoxy_para__ethyl.png",
+    "cloud": "/molecules/methoxy_para__ethyl.34de8b0cdb9883e2.webp",
     "hotspots": {
       "ortho": [
         37.082,
@@ -896,7 +924,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_para__ethyl.png"
   },
   {
     "id": "methoxy_para__hexyl",
@@ -907,7 +936,7 @@
     "smiles": "CCCCCCOC(=O)/C=C/c1ccc(OC)cc1",
     "formula": "C16H22O3",
     "structure": "/molecules/methoxy_para__hexyl.svg",
-    "cloud": "/molecules/methoxy_para__hexyl.png",
+    "cloud": "/molecules/methoxy_para__hexyl.a421259cd5d35b05.webp",
     "hotspots": {
       "ortho": [
         29.773,
@@ -927,7 +956,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_para__hexyl.png"
   },
   {
     "id": "methoxy_para__ethylhexyl",
@@ -938,7 +968,7 @@
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccc(OC)cc1",
     "formula": "C18H26O3",
     "structure": "/molecules/methoxy_para__ethylhexyl.svg",
-    "cloud": "/molecules/methoxy_para__ethylhexyl.png",
+    "cloud": "/molecules/methoxy_para__ethylhexyl.2da416f4c332202a.webp",
     "hotspots": {
       "ortho": [
         29.773,
@@ -958,7 +988,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_para__ethylhexyl.png"
   },
   {
     "id": "methoxy_para__methyl",
@@ -969,7 +1000,7 @@
     "smiles": "COC(=O)/C=C/c1ccc(OC)cc1",
     "formula": "C11H12O3",
     "structure": "/molecules/methoxy_para__methyl.svg",
-    "cloud": "/molecules/methoxy_para__methyl.png",
+    "cloud": "/molecules/methoxy_para__methyl.e7f861a06c4825d6.webp",
     "hotspots": {
       "ortho": [
         39.772,
@@ -989,7 +1020,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/methoxy_para__methyl.png"
   },
   {
     "id": "amino_ortho__acid",
@@ -1000,7 +1032,7 @@
     "smiles": "Nc1ccccc1/C=C/C(=O)O",
     "formula": "C9H9NO2",
     "structure": "/molecules/amino_ortho__acid.svg",
-    "cloud": "/molecules/amino_ortho__acid.png?v=af7a7175160c",
+    "cloud": "/molecules/amino_ortho__acid.ce46182d663fc72c.webp",
     "hotspots": {
       "ortho": [
         33.359,
@@ -1020,7 +1052,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/amino_ortho__acid.png?v=af7a7175160c"
   },
   {
     "id": "amino_ortho__ethyl",
@@ -1031,7 +1064,7 @@
     "smiles": "CCOC(=O)/C=C/c1ccccc1N",
     "formula": "C11H13NO2",
     "structure": "/molecules/amino_ortho__ethyl.svg",
-    "cloud": "/molecules/amino_ortho__ethyl.png",
+    "cloud": "/molecules/amino_ortho__ethyl.2f760dfbd3d58d7e.webp",
     "hotspots": {
       "ortho": [
         28.097,
@@ -1051,7 +1084,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/amino_ortho__ethyl.png"
   },
   {
     "id": "amino_ortho__hexyl",
@@ -1062,7 +1096,7 @@
     "smiles": "CCCCCCOC(=O)/C=C/c1ccccc1N",
     "formula": "C15H21NO2",
     "structure": "/molecules/amino_ortho__hexyl.svg",
-    "cloud": "/molecules/amino_ortho__hexyl.png",
+    "cloud": "/molecules/amino_ortho__hexyl.a30caf90fa167d3f.webp",
     "hotspots": {
       "ortho": [
         22.333,
@@ -1082,7 +1116,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/amino_ortho__hexyl.png"
   },
   {
     "id": "amino_ortho__ethylhexyl",
@@ -1093,7 +1128,7 @@
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccccc1N",
     "formula": "C17H25NO2",
     "structure": "/molecules/amino_ortho__ethylhexyl.svg",
-    "cloud": "/molecules/amino_ortho__ethylhexyl.png",
+    "cloud": "/molecules/amino_ortho__ethylhexyl.55e8f649404668f0.webp",
     "hotspots": {
       "ortho": [
         22.333,
@@ -1113,7 +1148,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/amino_ortho__ethylhexyl.png"
   },
   {
     "id": "amino_meta__acid",
@@ -1124,7 +1160,7 @@
     "smiles": "Nc1cccc(/C=C/C(=O)O)c1",
     "formula": "C9H9NO2",
     "structure": "/molecules/amino_meta__acid.svg",
-    "cloud": "/molecules/amino_meta__acid.png?v=19fa4e8bd94e",
+    "cloud": "/molecules/amino_meta__acid.3a9acc05ca5b66a9.webp",
     "hotspots": {
       "ortho": [
         33.574,
@@ -1144,7 +1180,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/amino_meta__acid.png?v=19fa4e8bd94e"
   },
   {
     "id": "amino_meta__ethyl",
@@ -1155,7 +1192,7 @@
     "smiles": "CCOC(=O)/C=C/c1cccc(N)c1",
     "formula": "C11H13NO2",
     "structure": "/molecules/amino_meta__ethyl.svg",
-    "cloud": "/molecules/amino_meta__ethyl.png",
+    "cloud": "/molecules/amino_meta__ethyl.21336bd33f9d2f16.webp",
     "hotspots": {
       "ortho": [
         28.285,
@@ -1175,7 +1212,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/amino_meta__ethyl.png"
   },
   {
     "id": "amino_meta__hexyl",
@@ -1186,7 +1224,7 @@
     "smiles": "CCCCCCOC(=O)/C=C/c1cccc(N)c1",
     "formula": "C15H21NO2",
     "structure": "/molecules/amino_meta__hexyl.svg",
-    "cloud": "/molecules/amino_meta__hexyl.png",
+    "cloud": "/molecules/amino_meta__hexyl.7df09aba57f49dab.webp",
     "hotspots": {
       "ortho": [
         22.484,
@@ -1206,7 +1244,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/amino_meta__hexyl.png"
   },
   {
     "id": "amino_meta__ethylhexyl",
@@ -1217,7 +1256,7 @@
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1cccc(N)c1",
     "formula": "C17H25NO2",
     "structure": "/molecules/amino_meta__ethylhexyl.svg",
-    "cloud": "/molecules/amino_meta__ethylhexyl.png",
+    "cloud": "/molecules/amino_meta__ethylhexyl.e16844808a06bfe2.webp",
     "hotspots": {
       "ortho": [
         22.484,
@@ -1237,7 +1276,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/amino_meta__ethylhexyl.png"
   },
   {
     "id": "amino_para__acid",
@@ -1248,7 +1288,7 @@
     "smiles": "Nc1ccc(/C=C/C(=O)O)cc1",
     "formula": "C9H9NO2",
     "structure": "/molecules/amino_para__acid.svg",
-    "cloud": "/molecules/amino_para__acid.png?v=456beceed750",
+    "cloud": "/molecules/amino_para__acid.eeb3f1b592444141.webp",
     "hotspots": {
       "ortho": [
         40.533,
@@ -1268,7 +1308,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/amino_para__acid.png?v=456beceed750"
   },
   {
     "id": "amino_para__ethyl",
@@ -1279,7 +1320,7 @@
     "smiles": "CCOC(=O)/C=C/c1ccc(N)cc1",
     "formula": "C11H13NO2",
     "structure": "/molecules/amino_para__ethyl.svg",
-    "cloud": "/molecules/amino_para__ethyl.png",
+    "cloud": "/molecules/amino_para__ethyl.ed6d1769afefc826.webp",
     "hotspots": {
       "ortho": [
         34.519,
@@ -1299,7 +1340,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/amino_para__ethyl.png"
   },
   {
     "id": "amino_para__hexyl",
@@ -1310,7 +1352,7 @@
     "smiles": "CCCCCCOC(=O)/C=C/c1ccc(N)cc1",
     "formula": "C15H21NO2",
     "structure": "/molecules/amino_para__hexyl.svg",
-    "cloud": "/molecules/amino_para__hexyl.png",
+    "cloud": "/molecules/amino_para__hexyl.5492dce3d38015f2.webp",
     "hotspots": {
       "ortho": [
         27.594,
@@ -1330,7 +1372,8 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/amino_para__hexyl.png"
   },
   {
     "id": "amino_para__ethylhexyl",
@@ -1341,7 +1384,7 @@
     "smiles": "CCCCC(CC)COC(=O)/C=C/c1ccc(N)cc1",
     "formula": "C17H25NO2",
     "structure": "/molecules/amino_para__ethylhexyl.svg",
-    "cloud": "/molecules/amino_para__ethylhexyl.png",
+    "cloud": "/molecules/amino_para__ethylhexyl.27352c63f52d8c5e.webp",
     "hotspots": {
       "ortho": [
         27.594,
@@ -1361,6 +1404,7 @@
       ]
     },
     "image_status": "ready",
-    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算"
+    "image_kind": "AI云层纹理＋化学连接校正球棍模型；定性教学示意，非量子化学计算",
+    "cloud_fallback": "/molecules/amino_para__ethylhexyl.png"
   }
 ]

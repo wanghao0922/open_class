@@ -48,10 +48,10 @@
 .student-waiting p{margin:0;font-size:clamp(20px,2vw,28px);font-weight:500;letter-spacing:2px;line-height:1.8;text-wrap:balance}
 @media(max-width:600px){.student-main-waiting{padding-bottom:70px}.student-waiting{min-height:260px;gap:22px}.student-waiting-symbol{width:56px;height:56px;border-radius:18px}.student-waiting p{letter-spacing:1px}}
 
-.structure-result{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(220px,.75fr);column-gap:24px;align-items:center}
-.structure-result>.structure-title,.structure-result>h3,.structure-result>.current-structure,.structure-result>.modification-chips{grid-column:1}
-.structure-result>.molecule-reference{grid-column:2;grid-row:1 / span 4;margin-top:0;align-self:center}
-@media(max-width:760px){.structure-result{display:block}.structure-result>.molecule-reference{margin-top:18px}}
+.structure-result-with-reference{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(220px,.75fr);column-gap:24px;align-items:center}
+.structure-result-with-reference>.structure-title,.structure-result-with-reference>h3,.structure-result-with-reference>.current-structure,.structure-result-with-reference>.modification-chips{grid-column:1}
+.structure-result-with-reference>.molecule-reference{grid-column:2;grid-row:1 / span 4;margin-top:0;align-self:center}
+@media(max-width:760px){.structure-result-with-reference{display:block}.structure-result-with-reference>.molecule-reference{margin-top:18px}}
 
 @media(min-width:761px){
   .molecule-workspace{grid-template-rows:auto minmax(0,1fr)}

@@ -6,6 +6,7 @@ import type {Answer,Classroom,Group,Identity,Molecule,Stats} from './types';
 import {JoinModal,Modal,PhaseNav,StatsGrid,StatusPill} from './components';
 import {HypothesisTask,MoleculeTask} from './StudentTasks';
 import {SPECTRUM_IMAGES} from './MoleculeSpectrum';
+import {preloadImages} from './preloadImages';
 import './styles.css';
 import sunscreenIntro from './assets/sunscreen-cartoon.webp';
 import {DeleteClassModal,DeletedClassesModal} from './ClassroomTrash';
@@ -69,15 +70,23 @@ function App(){
  useEffect(()=>{let live=true;Promise.all([api<Identity>('/me').catch(()=>null),api<Molecule[]>('/catalog')]).then(([me,catalog])=>{if(live){setIdentity(me);setMolecules(catalog);setReady(true);}}).catch(()=>{if(live)setFatal('暂时无法连接课堂服务，请检查服务是否启动并刷新。');});return()=>{live=false;};},[]);
  useEffect(()=>{
   if(!molecules.length)return;
-  const urls=[...new Set([sunscreenIntro,...SPECTRUM_IMAGES,...molecules.flatMap(m=>[m.cloud,m.structure])].filter(Boolean))];
-  let cancelled=false;
-  const load=(url:string)=>new Promise<void>(resolve=>{const image=new Image();image.decoding='async';image.onload=()=>resolve();image.onerror=()=>resolve();image.src=new URL(url,location.origin).href;});
-  async function preload(){
-   for(let i=0;i<urls.length&&!cancelled;i+=4){await Promise.all(urls.slice(i,i+4).map(load));}
-  }
-  const start=()=>{void preload();};
-  if('requestIdleCallback' in window){const id=window.requestIdleCallback(start,{timeout:1500});return()=>{cancelled=true;window.cancelIdleCallback(id);};}
-  const id=setTimeout(start,250);return()=>{cancelled=true;clearTimeout(id);};
+  const selectable=molecules.filter(m=>m.available);
+  const remaining=molecules.filter(m=>!m.available);
+  const urls=[...selectable.map(m=>m.cloud),...SPECTRUM_IMAGES,sunscreenIntro,
+   ...selectable.map(m=>m.structure),...remaining.flatMap(m=>[m.cloud,m.structure])];
+  let cancelled=false;let queue:ReturnType<typeof preloadImages>|undefined;
+  const start=async()=>{
+   // Give images already on screen the first opportunity to use the connection.
+   const visible=[...document.querySelectorAll<HTMLImageElement>('.cloud-image')];
+   await Promise.race([
+    Promise.all(visible.map(image=>image.decode().catch(()=>{}))),
+    new Promise(resolve=>setTimeout(resolve,1500))
+   ]);
+   if(!cancelled)queue=preloadImages(urls);
+  };
+  const stop=()=>{cancelled=true;queue?.cancel();};
+  if('requestIdleCallback' in window){const id=window.requestIdleCallback(()=>{void start();},{timeout:1500});return()=>{stop();window.cancelIdleCallback(id);};}
+  const id=setTimeout(()=>{void start();},250);return()=>{stop();clearTimeout(id);};
  },[molecules]);
  const logout=useCallback(()=>{api('/auth/logout','POST').catch(()=>{});setIdentity(null);},[]);
  if(fatal)return <div className="initial-loading"><WifiOff size={30}/><p>{fatal}</p><button className="button primary" onClick={()=>location.reload()}>重新连接</button></div>;

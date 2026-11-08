@@ -12,7 +12,7 @@ from pathlib import Path
 from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.responses import FileResponse, JSONResponse, Response
 from fastapi.staticfiles import StaticFiles
-from backend.catalog import load_catalog
+from backend.catalog import load_catalog, molecule_cache_control
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / 'frontend/public'
@@ -39,7 +39,7 @@ async def headers(request: Request, call_next):
     elif request.url.path.startswith('/assets/'):
         response.headers['Cache-Control'] = 'public, max-age=31536000, immutable'
     elif request.url.path.startswith('/molecules/'):
-        response.headers['Cache-Control'] = 'public, max-age=86400'
+        response.headers['Cache-Control'] = molecule_cache_control(request.url.path) if response.status_code == 200 else 'no-store'
     return response
 
 

@@ -22,7 +22,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from sqlalchemy import DateTime, ForeignKey, Integer, String, Text, UniqueConstraint, create_engine, event, select
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column, sessionmaker
-from backend.catalog import load_catalog
+from backend.catalog import load_catalog, molecule_cache_control
 
 ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT / '.env')
@@ -159,7 +159,7 @@ async def response_headers(request: Request, call_next):
     elif request.url.path.startswith('/assets/'):
         response.headers['Cache-Control'] = 'public, max-age=31536000, immutable'
     elif request.url.path.startswith('/molecules/'):
-        response.headers['Cache-Control'] = 'public, max-age=86400'
+        response.headers['Cache-Control'] = molecule_cache_control(request.url.path) if response.status_code == 200 else 'no-store'
     return response
 
 
