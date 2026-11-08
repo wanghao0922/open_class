@@ -27,7 +27,8 @@ def main():
     path = directory / 'catalog.json'
     catalog = json.loads(path.read_text(encoding='utf-8'))
     for item in catalog:
-        data = (directory / f"{item['id']}.svg").read_bytes()
+        # Git normalizes text on Linux; fingerprint the same bytes on both hosts.
+        data = (directory / f"{item['id']}.svg").read_bytes().replace(b'\r\n', b'\n')
         digest = hashlib.sha256(data).hexdigest()[:16]
         name = f"{item['id']}.{digest}.svg"
         (directory / name).write_bytes(data)
