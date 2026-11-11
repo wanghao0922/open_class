@@ -121,6 +121,19 @@ def test_phase_switch_and_molecule_validation(teacher_client):
     client.close()
 
 
+def test_extended_functional_groups_are_saved_and_aggregated(teacher_client):
+    room=create_room(teacher_client, total=2)
+    control(teacher_client, room, 2)
+    client=student(room, 1)
+    rows=[[{'id':'ketone','count':1}], [{'id':'ether','count':1}]]
+    assert send(client, rows).status_code==200
+    assert client.put('/api/student/hypothesis',json={'rows':[[{'id':'unknown','count':1}], [{'id':'ether','count':1}]],'revision':1}).status_code==422
+    stats_result=teacher_client.get(f'/api/teacher/classes/{room["id"]}/stats/2').json()
+    assert {card['label'] for card in stats_result['cards']}=={'酮羰基','醚键'}
+    assert {item['id'] for card in stats_result['cards'] for item in card['items']}=={'ketone','ether'}
+    client.close()
+
+
 def test_thirty_groups_in_parallel(teacher_client):
     room=create_room(teacher_client,30)
     control(teacher_client,room,2)

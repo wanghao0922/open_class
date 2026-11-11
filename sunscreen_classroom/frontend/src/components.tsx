@@ -13,7 +13,9 @@ function FGContent({id}:{id:FGId}){
  else if(id==='alkyne')content=<><path {...base} d="M61 34 H99 M61 40 H99 M61 46 H99 M43 40 H21 M117 40 H139"/><text x="51" y="47">C</text><text x="109" y="47">C</text></>;
  else if(id==='carboxyl')content=<><path {...base} d="M35 43 H58 M73 26 V13 M79 26 V13 M88 43 H103"/><text x="76" y="51">C</text><text x="76" y="12" className="oxygen">O</text><text x="126" y="51" className="oxygen">OH</text></>;
  else if(id==='aldehyde')content=<><path {...base} d="M35 43 H58 M73 26 V13 M79 26 V13 M88 43 H109"/><text x="76" y="51">C</text><text x="76" y="12" className="oxygen">O</text><text x="125" y="51">H</text></>;
- else if(id==='ester')content=<><path {...base} d="M20 43 H47 M62 26 V13 M68 26 V13 M77 43 H95 M119 43 H145"/><text x="65" y="51">C</text><text x="65" y="12" className="oxygen">O</text><text x="107" y="51" className="oxygen">O</text></>;
+ else if(id==='ketone')content=<><path {...base} d="M43 43 H60 M72 26 V13 M78 26 V13 M88 43 H109"/><text x="31" y="51">R<tspan baselineShift="super" fontSize="14">1</tspan></text><text x="75" y="51">C</text><text x="75" y="12" className="oxygen">O</text><text x="128" y="51">R<tspan baselineShift="super" fontSize="14">2</tspan></text></>;
+ else if(id==='ether')content=<><path {...base} d="M43 43 H62 M90 43 H109"/><text x="31" y="51">R<tspan baselineShift="super" fontSize="14">1</tspan></text><text x="80" y="51" className="oxygen">O</text><text x="128" y="51">R<tspan baselineShift="super" fontSize="14">2</tspan></text></>;
+ else if(id==='ester')content=<><path {...base} d="M20 43 H47 M62 26 V13 M68 26 V13 M77 43 H95 M119 43 H145"/><text x="65" y="51">C</text><text x="65" y="12" className="oxygen">O</text><text x="107" y="51" className="oxygen">O</text><text x="153" y="51">R</text></>;
  else content=<><path {...base} d="M33 40 H63"/><text x="99" y="48" className="oxygen">OH</text></>;
  return <>{content}</>;
 }

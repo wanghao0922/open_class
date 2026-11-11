@@ -131,7 +131,7 @@ def local_credentials():
 TEACHER_USERNAME, TEACHER_PASSWORD = local_credentials()
 COOKIE = 'sunscreen_session'
 COOKIE_SECURE = os.getenv('COOKIE_SECURE', 'true' if os.getenv('RENDER') else 'false').lower() == 'true'
-FG = {'carboxyl': '羧基', 'aldehyde': '醛基', 'ester': '酯基', 'hydroxyl': '羟基', 'alkene': '碳碳双键', 'alkyne': '碳碳三键'}
+FG = {'carboxyl': '羧基', 'aldehyde': '醛基', 'ester': '酯基', 'hydroxyl': '羟基', 'alkene': '碳碳双键', 'alkyne': '碳碳三键', 'ketone': '酮羰基', 'ether': '醚键'}
 CATALOG_FILE = ROOT / 'frontend/public/molecules/catalog.json'
 
 
@@ -438,12 +438,12 @@ def rename(cid: int, gid: int, data: Rename, db: Session = Depends(db_session)):
 
 
 class FGCount(BaseModel):
-    id: Literal['carboxyl', 'aldehyde', 'ester', 'hydroxyl', 'alkene', 'alkyne']
+    id: Literal['carboxyl', 'aldehyde', 'ester', 'hydroxyl', 'alkene', 'alkyne', 'ketone', 'ether']
     count: int = Field(default=1, ge=1, le=12)
 
 
 class Hypothesis(BaseModel):
-    rows: list[list[FGCount]] = Field(min_length=2, max_length=7)
+    rows: list[list[FGCount]] = Field(min_length=2, max_length=5)
     revision: int = Field(default=0, ge=0)
 
 

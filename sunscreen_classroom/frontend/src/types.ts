@@ -1,4 +1,4 @@
-export type FGId = 'carboxyl' | 'aldehyde' | 'ester' | 'hydroxyl' | 'alkene' | 'alkyne';
+export type FGId = 'carboxyl' | 'aldehyde' | 'ester' | 'hydroxyl' | 'alkene' | 'alkyne' | 'ketone' | 'ether';
 export type FGCount = {id: FGId; count: number};
 export type Row = FGCount[];
 export type Molecule = {id:string; name:string; ring:string; position:string|null; ester:string; formula:string; smiles:string; structure:string; cloud:string; cloud_fallback?:string; hotspots:Record<string,number[]>; image_status:string; image_kind:string; available:boolean};
@@ -17,7 +17,7 @@ export async function api<T>(path:string,method='GET',data?:unknown):Promise<T>{
   if(!res.ok){const result=await res.json().catch(()=>({}));const detail=result.detail;throw new ApiError(typeof detail==='string'?detail:'填写内容有误，请检查后重试。',res.status);}
   return res.json();
 }
-export const FG_NAMES:Record<FGId,string>={carboxyl:'羧基',aldehyde:'醛基',ester:'酯基',hydroxyl:'羟基',alkene:'碳碳双键',alkyne:'碳碳三键'};
+export const FG_NAMES:Record<FGId,string>={carboxyl:'羧基',aldehyde:'醛基',ester:'酯基',hydroxyl:'羟基',alkene:'碳碳双键',alkyne:'碳碳三键',ketone:'酮羰基',ether:'醚键'};
 export const FG_IDS=Object.keys(FG_NAMES) as FGId[];
 export const rowKey=(row:Row)=>JSON.stringify([...row].sort((a,b)=>a.id.localeCompare(b.id)));
 export const rowName=(row:Row)=>row.map(x=>(x.count>1?`${x.count}个`:'')+FG_NAMES[x.id]).join('＋');
